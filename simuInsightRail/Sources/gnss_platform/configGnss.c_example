@@ -1,0 +1,40 @@
+/*
+ * configGnss.c
+ *
+ *  Created on: Feb 2, 2017
+ *      Author: ka3112
+ */
+
+
+#include "PowerControl.h"
+#include "PinDefs.h"
+#include "PinConfig.h"
+
+#include "configGnss.h"
+
+// functions to power the modem on and off
+bool Gnss_PowerOn(void)
+{
+    powerGNSSOn();// gives no status back
+    return true ;
+}
+
+bool Gnss_PowerOff(void)
+{
+    powerGNSSOff();// gives no status back
+    return true;
+}
+
+bool Gnss_ResetOn(void)
+{
+    // for the firefly reset is active low
+    GPIO_DRV_ClearPinOutput(GNSS_RESET);// gives no status back
+    return true;
+}
+
+bool Gnss_ResetOff(void)
+{
+    // for the firefly reset is active low
+    GPIO_DRV_SetPinOutput(GNSS_RESET);// gives no status back
+    return true;
+}

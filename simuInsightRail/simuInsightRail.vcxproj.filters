@@ -1,0 +1,1883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Sources">
+      <UniqueIdentifier>{dacb3504-510f-4bc7-92a7-5b01fd75c9cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK">
+      <UniqueIdentifier>{9951b49a-a578-4526-8cdc-2989a2ba3689}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\app">
+      <UniqueIdentifier>{6d8e76b4-5bb6-460a-b087-099fe099e6cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\app\Ephemeris">
+      <UniqueIdentifier>{7579fcc0-e1ff-4eb5-b558-37f5de455c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\app\FCCTest">
+      <UniqueIdentifier>{d6c939aa-5260-4dc8-8bed-d60dd9b949f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\app\Measurement">
+      <UniqueIdentifier>{635c500a-cf0e-4765-b3db-dbdfebf51761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\app\NFC">
+      <UniqueIdentifier>{47dbdb89-ba96-4573-86f0-b82f641a9782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\app\Schedule">
+      <UniqueIdentifier>{c37fd047-50ec-4d9c-a224-c977062b7d3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\app\SelfTest">
+      <UniqueIdentifier>{13feffa1-c2b3-4d8e-88f3-127db164cb7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\config">
+      <UniqueIdentifier>{7a3d847e-aa2b-4d55-955f-168a6d9c90e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\cunit_tests">
+      <UniqueIdentifier>{5741cfeb-4721-4193-a512-cc710275266c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\device">
+      <UniqueIdentifier>{2fcc95cc-b5e3-46d2-814e-60a730ea3b44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\drv_i2c">
+      <UniqueIdentifier>{0ae1b9fb-f2f8-442f-8a8b-f01e4c717e93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\hw_init">
+      <UniqueIdentifier>{76ddaa8f-5f2c-4c29-977d-2a3b208d95ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\PMIC">
+      <UniqueIdentifier>{24e2a8a1-7042-4ad9-b23e-e4659dced1a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform">
+      <UniqueIdentifier>{f9b31604-1830-424e-9962-b39a153eccad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\CMSIS">
+      <UniqueIdentifier>{31338f00-6742-4509-8d20-e84c8c0b4af4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\devices">
+      <UniqueIdentifier>{60b9c665-0a54-4b07-9f7c-b7cd714bebbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers">
+      <UniqueIdentifier>{79b1f220-cb90-46e7-8561-68f2a6df05f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal">
+      <UniqueIdentifier>{38f8e793-d522-48af-a21d-d720120b93f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\osa">
+      <UniqueIdentifier>{180c48a3-88fb-46be-8994-3403d6d57471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\system">
+      <UniqueIdentifier>{191a45e3-33a7-47f7-8739-c0c9ae4e010a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\utilities">
+      <UniqueIdentifier>{a58f5925-f173-40e5-b160-cbec05be8aee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\CMSIS\Include">
+      <UniqueIdentifier>{ce9df9e8-a2e5-45f9-94f8-5928badcd524}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\devices\MK24F12">
+      <UniqueIdentifier>{0fb47c79-eb8e-48ba-b556-1d9d617566a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\devices\MK24F12\include">
+      <UniqueIdentifier>{b6a5d121-db2b-40b8-8536-1b6e7d21a411}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\devices\MK24F12\startup">
+      <UniqueIdentifier>{65a3c922-6a60-4749-8aa9-72c75f528f4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\devices\MK24F12\startup\gcc">
+      <UniqueIdentifier>{0f9cbdbd-e6c7-4ea5-9e66-f548c3e16a7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\inc">
+      <UniqueIdentifier>{91bc3b1b-66e6-4618-8627-ac65d1e420d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src">
+      <UniqueIdentifier>{1fae66ef-69ad-4b3b-8d77-712836352939}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\adc16">
+      <UniqueIdentifier>{d8ab8932-54ad-4fdd-99f0-c1241abc8dc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\dac">
+      <UniqueIdentifier>{d041db4f-344d-4589-b933-2b443a08ad54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\dspi">
+      <UniqueIdentifier>{f3d6ee40-2034-4d8e-b4a7-4c57dae5ad2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\edma">
+      <UniqueIdentifier>{51a9fd35-eab5-47d1-84f2-779d9eed3999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\flash">
+      <UniqueIdentifier>{ec5cae72-eaaa-4f4b-8458-fec193de19a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\ftm">
+      <UniqueIdentifier>{7c37ff26-408a-4e77-883c-0494aed3f8c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\gpio">
+      <UniqueIdentifier>{681368b5-4199-4003-8b6f-4a0f02e5f6c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\i2c">
+      <UniqueIdentifier>{414c58da-a1f6-46eb-ac96-3a134e25b2fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\pdb">
+      <UniqueIdentifier>{5646e802-3901-4d75-8576-522964e70872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\rtc">
+      <UniqueIdentifier>{3ea57a8f-45f9-4fae-bf61-4a93790c28c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\uart">
+      <UniqueIdentifier>{5158cf84-54aa-41fc-81fc-741de2361848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\vref">
+      <UniqueIdentifier>{4a07f7ac-3ec9-43f0-9130-0758f28d9fe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\wdog">
+      <UniqueIdentifier>{2905c21a-b223-481f-b88c-f739f3681ae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\flash\c90TFS">
+      <UniqueIdentifier>{d8298fa6-acee-47e8-b426-9667aed7acbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc">
+      <UniqueIdentifier>{693eaa36-d8b3-42ab-be25-0ac395f85b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\include">
+      <UniqueIdentifier>{c50c7cda-d65e-422f-a52e-75a115b20573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source">
+      <UniqueIdentifier>{510b3f77-d156-4479-bd04-7ce2ccd55012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\inc">
+      <UniqueIdentifier>{15352728-b499-4c74-b37c-ddfd15a9fd94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src">
+      <UniqueIdentifier>{cbf4dd3f-63e1-47a4-a4a2-02a7a36831b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\adc16">
+      <UniqueIdentifier>{7205d946-3fbf-421e-9b51-666bbbd82796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\dac">
+      <UniqueIdentifier>{e9ca9586-5835-4b2a-801a-378f5fc093eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\dmamux">
+      <UniqueIdentifier>{aa1003d4-db54-4d2e-aea7-949be0d67b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\dspi">
+      <UniqueIdentifier>{b08e82e4-5cb3-4c15-9c2b-e45ed2af65e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\edma">
+      <UniqueIdentifier>{12b207b1-756a-485c-b3cb-469c0a212478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\ftm">
+      <UniqueIdentifier>{e8cbb4d5-0923-4658-95df-2eafe7b4292e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\gpio">
+      <UniqueIdentifier>{0fb4472b-09c1-490d-a5c0-534e185977f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\i2c">
+      <UniqueIdentifier>{1e76b05f-9f7b-4627-a370-2276b19297fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\mcg">
+      <UniqueIdentifier>{2b7ff854-23c2-45a1-a1fe-5c5d8f6a3167}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\osc">
+      <UniqueIdentifier>{e88ed9d6-dbae-4b85-81d9-876358d507df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\pdb">
+      <UniqueIdentifier>{fccdf1ad-bc19-4855-8653-b6bc0af8b50b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\port">
+      <UniqueIdentifier>{2a6b1714-7c1b-4e36-8ab2-735edc89e3ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\rtc">
+      <UniqueIdentifier>{f2e1a2ae-11f7-4c1f-95f6-acaaee88276e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\sim">
+      <UniqueIdentifier>{996af01b-8696-487f-b6fe-4424c8a1a164}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\uart">
+      <UniqueIdentifier>{e856c53c-711d-491b-87c3-7231867d2cfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\vref">
+      <UniqueIdentifier>{5cd10ce8-83c5-40eb-818e-58e359f6647c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\wdog">
+      <UniqueIdentifier>{dfea3751-d6a8-4121-8ea0-ffc4c5f47b90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\hal\src\sim\MK24F12">
+      <UniqueIdentifier>{d9c6e23e-22f2-4872-8a73-5eb11156e1e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\osa\inc">
+      <UniqueIdentifier>{e1c829df-2106-4e60-a4f1-9fe26225eb61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\osa\src">
+      <UniqueIdentifier>{938d99a3-c6a0-4ed7-ab7a-2d764a37ff28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\system\inc">
+      <UniqueIdentifier>{25816c18-10e5-4e2a-ab6c-45b2f243e9dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\system\src">
+      <UniqueIdentifier>{963d9ac3-7236-45f5-99e3-6144b2f77ec4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\system\src\clock">
+      <UniqueIdentifier>{6673f5c6-5830-4480-b56d-308e9052673c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\system\src\interrupt">
+      <UniqueIdentifier>{de07bd71-9407-4f01-a57c-1215a1ff7c7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\system\src\power">
+      <UniqueIdentifier>{60dac58e-a452-4e08-8b57-d470cd841025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\system\src\clock\MK24F12">
+      <UniqueIdentifier>{539b54cc-73f2-472a-ae0b-362aa473ab16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\utilities\inc">
+      <UniqueIdentifier>{74868419-be13-499e-8c14-44789aa0a17d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\platform\utilities\src">
+      <UniqueIdentifier>{684f0b9b-53af-49b4-b9f6-1bfa02e3b837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\cli_platform">
+      <UniqueIdentifier>{c789588a-8cb4-486d-b0b9-1508995c6f50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\comm_mqtt_platform">
+      <UniqueIdentifier>{2a98b5be-4ba6-433b-8ff1-3d070b6275ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\comm_mqtt_platform\mqttclientc">
+      <UniqueIdentifier>{b425d7ce-8f5d-43f7-8385-dc689b1fe306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\comm_mqtt_platform\mqttpacket">
+      <UniqueIdentifier>{625a5023-7db8-4ddb-a622-41f4ac14bc35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\datastore_platform">
+      <UniqueIdentifier>{0233059f-5801-40ed-abb9-49e3603f9ea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\drv_ad7766">
+      <UniqueIdentifier>{9afcd878-129d-4eda-b1a8-68b95d435976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\drv_i2c\drv_hdc1050">
+      <UniqueIdentifier>{b20cd3d3-6a99-43bc-97fb-61eff7cbd142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\drv_i2c\drv_lis3dh">
+      <UniqueIdentifier>{46780857-2ee6-433f-8e01-93efd76f4245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\drv_i2c\drv_tmp431">
+      <UniqueIdentifier>{042e826c-327b-422c-b038-69647f6e1e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\drv_i2c\ds137n">
+      <UniqueIdentifier>{a3db4d18-be5b-4a2e-a335-e87a280c6780}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\drv_int_uart">
+      <UniqueIdentifier>{5598467e-0de0-4eb9-98eb-933bc75f3164}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\drv_is25">
+      <UniqueIdentifier>{41099cc5-1435-451e-bf54-0fb81679b145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\eventlog_platform">
+      <UniqueIdentifier>{0c5dd9bd-68b2-44f4-a976-1ccf646c795f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\freertos_platform">
+      <UniqueIdentifier>{ea866b1c-44a4-4fd4-9ebf-437ca20c16ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\freertos_platform\config">
+      <UniqueIdentifier>{ae210f26-1830-4a32-8aed-bf1f97ac1113}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\freertos_platform\include">
+      <UniqueIdentifier>{4f066ae8-e7f6-45f5-ad0b-fcedbd78b3c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\freertos_platform\port">
+      <UniqueIdentifier>{7cbed677-26db-440e-8269-aa5bdfe1941e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\freertos_platform\src">
+      <UniqueIdentifier>{b0db8fc2-e7aa-4834-8113-60801c3e608d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\freertos_platform\config\gcc">
+      <UniqueIdentifier>{fbd54dfd-22ba-4ee5-b466-97f0b08cf7a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\freertos_sysview_platform">
+      <UniqueIdentifier>{a85fb7cd-d611-43fb-949d-3cf305277d92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\freertos_sysview_platform\Config">
+      <UniqueIdentifier>{1e628961-64fb-4f40-85a7-bb55dbda286e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\freertos_sysview_platform\SEGGER">
+      <UniqueIdentifier>{8d6b33a4-dbf2-4864-b3bc-3c937992f0b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\gnss_platform">
+      <UniqueIdentifier>{a8a7d2d2-3753-44a2-87ac-22fd8ea7f2ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\idef_proto2_platform">
+      <UniqueIdentifier>{ac39320b-961f-4e10-a75b-8f4dbf5e5034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\idef_svccommon_platform">
+      <UniqueIdentifier>{0209cbe9-fd17-43fe-8ae9-1c85984a0312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\idef_svcdata_platform">
+      <UniqueIdentifier>{a54dfd4f-56e8-4e4f-9215-066ecc557638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\idef_svcfirmware_platform">
+      <UniqueIdentifier>{0c82c0b7-7992-4ca3-b0c2-89bb30658367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\measure_NEW">
+      <UniqueIdentifier>{0b92cbb3-ce98-41a8-9863-01c01b9ab12d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\modem_platform">
+      <UniqueIdentifier>{fe3ff214-0d45-4ace-bed6-637556615823}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\svc_mqtt_data_platform">
+      <UniqueIdentifier>{1d6e0e03-236d-416c-b47a-033bc7c8c561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\svc_mqtt_data_platform\msg">
+      <UniqueIdentifier>{5a3da42c-d11f-45e3-a1cf-c49317435332}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\svc_mqtt_firmware_platform">
+      <UniqueIdentifier>{6c2feddf-44a4-497b-bc5e-0f103d521ec3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sources\utils_platform">
+      <UniqueIdentifier>{6d475f95-5263-40d3-8308-fd84fb3599d1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="simuInsightRail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\Ephemeris\ephemeris.c">
+      <Filter>Source Files\Sources\app\Ephemeris</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\FCCTest\FccTest.c">
+      <Filter>Source Files\Sources\app\FCCTest</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\Measurement\Measurement.c">
+      <Filter>Source Files\Sources\app\Measurement</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\NFC\nfc.c">
+      <Filter>Source Files\Sources\app\NFC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\NFC\nfc_cli.c">
+      <Filter>Source Files\Sources\app\NFC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\Schedule\schedule.c">
+      <Filter>Source Files\Sources\app\Schedule</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\SelfTest\selfTest.c">
+      <Filter>Source Files\Sources\app\SelfTest</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\alarms.c">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\EnergyMonitor.c">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\Vbat.c">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\xTaskApp.c">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\xTaskAppCommsTest.c">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\xTaskAppGNSS.c">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\xTaskAppOta.c">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\app\xTaskAppRtc.c">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\configBootloader.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\configCLI.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\configData.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\configIDEF.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\configIDEFParam.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\configModem.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\configMQTT.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\configPinNames.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\configRTOS.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\configSvcData.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\config\SEGGER_SYSVIEW_Config_FreeRTOS.c">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\TestSuite.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_Alarms.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_basic.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_binaryCLI.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_crc.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_DS1374.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_externalFlash.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_json.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_nfc.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_NvmConfig.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_pmic.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cunit_tests\UT_Temp.c">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\Device.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\Harvester.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\NvmCalib.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\NvmConfig.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\NvmData.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\pin_mux.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\PinConfig.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\PowerControl.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\PowerOffFailsafe.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\xTaskDevice.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\device\xTaskWatchdog.c">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_i2c\i2c.c">
+      <Filter>Source Files\Sources\drv_i2c</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\hw_init\PMIC_UART.c">
+      <Filter>Source Files\Sources\hw_init</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\hw_init\rtc.c">
+      <Filter>Source Files\Sources\hw_init</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\hw_init\TestUART.c">
+      <Filter>Source Files\Sources\hw_init</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\PMIC\convert_junit.c">
+      <Filter>Source Files\Sources\PMIC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\PMIC\pmic.c">
+      <Filter>Source Files\Sources\PMIC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\boardSpecificCLI.c">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\crc.c">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Events.c">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\image.c">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\main.c">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Resources.c">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\utils.c">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\devices\MK24F12\startup\system_MK24F12.c">
+      <Filter>Source Files\SDK\platform\devices\MK24F12\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\devices\startup.c">
+      <Filter>Source Files\SDK\platform\devices</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\adc16\fsl_adc16_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\adc16</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\adc16\fsl_adc16_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\adc16</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dac\fsl_dac_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dac</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dac\fsl_dac_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dac</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dac\fsl_dac_irq.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dac</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dac\fsl_dac_lpm_callback.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dac</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dspi</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_edma_irq.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dspi</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_edma_master_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dspi</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_edma_shared_function.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dspi</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_edma_slave_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dspi</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_irq.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dspi</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_master_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dspi</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_shared_function.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dspi</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_slave_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\dspi</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\edma\fsl_edma_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\edma</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\edma\fsl_edma_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\edma</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\edma\fsl_edma_irq.c">
+      <Filter>Source Files\SDK\platform\drivers\src\edma</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\edma\fsl_edma_lpm_callback.c">
+      <Filter>Source Files\SDK\platform\drivers\src\edma</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\CopyToRam.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\DEFlashPartition.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\DFlashGetProtection.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\DFlashSetProtection.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\EEEWrite.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\EERAMGetProtection.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\EERAMSetProtection.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashCheckSum.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashCommandSequence.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashEraseAllBlock.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashEraseBlock.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashEraseResume.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashEraseSector.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashEraseSuspend.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashGetSecurityState.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashInit.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashProgram.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashProgramCheck.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashProgramOnce.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashProgramSection.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashReadOnce.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashReadResource.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashSecurityBypass.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashVerifyAllBlock.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashVerifyBlock.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashVerifySection.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\PFlashGetProtection.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\PFlashSetProtection.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\PFlashSwap.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\PFlashSwapCtl.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\SetEEEEnable.c">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\ftm\fsl_ftm_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\ftm</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\ftm\fsl_ftm_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\ftm</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\ftm\fsl_ftm_irq.c">
+      <Filter>Source Files\SDK\platform\drivers\src\ftm</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\gpio\fsl_gpio_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\gpio</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\gpio\fsl_gpio_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\gpio</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\i2c\fsl_i2c_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\i2c</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\i2c\fsl_i2c_master_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\i2c</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\i2c\fsl_i2c_shared_function.c">
+      <Filter>Source Files\SDK\platform\drivers\src\i2c</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\i2c\fsl_i2c_slave_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\i2c</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\pdb\fsl_pdb_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\pdb</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\pdb\fsl_pdb_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\pdb</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\pdb\fsl_pdb_irq.c">
+      <Filter>Source Files\SDK\platform\drivers\src\pdb</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\pdb\fsl_pdb_lpm_callback.c">
+      <Filter>Source Files\SDK\platform\drivers\src\pdb</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\rtc\fsl_rtc_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\rtc\fsl_rtc_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\uart\fsl_uart_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\uart</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\uart\fsl_uart_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\uart</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\vref\fsl_vref_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\vref</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\vref\fsl_vref_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\vref</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_common.c">
+      <Filter>Source Files\SDK\platform\drivers\src\wdog</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_driver.c">
+      <Filter>Source Files\SDK\platform\drivers\src\wdog</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_irq.c">
+      <Filter>Source Files\SDK\platform\drivers\src\wdog</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_lpm_callback.c">
+      <Filter>Source Files\SDK\platform\drivers\src\wdog</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\adc16\fsl_adc16_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\adc16</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\dac\fsl_dac_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\dac</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\dmamux\fsl_dmamux_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\dmamux</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\dspi\fsl_dspi_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\dspi</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\edma\fsl_edma_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\edma</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\ftm\fsl_ftm_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\ftm</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\gpio\fsl_gpio_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\gpio</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\i2c\fsl_i2c_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\i2c</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\mcg\fsl_mcg_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\mcg</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\mcg\fsl_mcg_hal_modes.c">
+      <Filter>Source Files\SDK\platform\hal\src\mcg</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\osc\fsl_osc_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\pdb\fsl_pdb_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\pdb</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\port\fsl_port_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\port</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\rtc\fsl_rtc_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\sim\MK24F12\fsl_sim_hal_MK24F12.c">
+      <Filter>Source Files\SDK\platform\hal\src\sim\MK24F12</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\uart\fsl_uart_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\uart</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\vref\fsl_vref_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\vref</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\hal\src\wdog\fsl_wdog_hal.c">
+      <Filter>Source Files\SDK\platform\hal\src\wdog</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\osa\src\fsl_os_abstraction_bm.c">
+      <Filter>Source Files\SDK\platform\osa\src</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\osa\src\fsl_os_abstraction_free_rtos.c">
+      <Filter>Source Files\SDK\platform\osa\src</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\system\src\clock\MK24F12\fsl_clock_MK24F12.c">
+      <Filter>Source Files\SDK\platform\system\src\clock\MK24F12</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\system\src\clock\fsl_clock_manager.c">
+      <Filter>Source Files\SDK\platform\system\src\clock</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\system\src\clock\fsl_clock_manager_common.c">
+      <Filter>Source Files\SDK\platform\system\src\clock</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\system\src\interrupt\fsl_interrupt_manager.c">
+      <Filter>Source Files\SDK\platform\system\src\interrupt</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\system\src\power\fsl_power_manager.c">
+      <Filter>Source Files\SDK\platform\system\src\power</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\utilities\src\fsl_debug_console.c">
+      <Filter>Source Files\SDK\platform\utilities\src</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\utilities\src\fsl_misc_utilities.c">
+      <Filter>Source Files\SDK\platform\utilities\src</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\platform\utilities\src\print_scan.c">
+      <Filter>Source Files\SDK\platform\utilities\src</Filter>
+    </ClCompile>
+    <ClCompile Include="startup_MK24F12.c">
+      <Filter>Source Files\SDK\platform\devices\MK24F12\startup\gcc</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cli_platform\binaryCLI.c">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cli_platform\binaryCLI_Task.c">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cli_platform\CLIcmd.c">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cli_platform\CLIio.c">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cli_platform\COBS.c">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cli_platform\json.c">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\cli_platform\xTaskCLI.c">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttclientc\MQTTClient.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttclientc</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttclientc</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS_lwIP.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttclientc</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS_Modem.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttclientc</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTConnectClient.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTConnectServer.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTDeserializePublish.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTFormat.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTPacket.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTSerializePublish.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTSubscribeClient.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTSubscribeServer.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTUnsubscribeClient.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTUnsubscribeServer.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\commCLI.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\comm_mqtt\TaskComm.c">
+      <Filter>Source Files\Sources\comm_mqtt_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\datastore_platform\DataStore.c">
+      <Filter>Source Files\Sources\datastore_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_ad7766\AD7766_Common.c">
+      <Filter>Source Files\Sources\drv_ad7766</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_ad7766\AD7766_DMA.c">
+      <Filter>Source Files\Sources\drv_ad7766</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_ad7766\AD7766_Intrpt.c">
+      <Filter>Source Files\Sources\drv_ad7766</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_i2c\drv_hdc1050\hdc1050.c">
+      <Filter>Source Files\Sources\drv_i2c\drv_hdc1050</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_i2c\drv_hdc1050\hdc1050_fsl_i2c_master_driver.c">
+      <Filter>Source Files\Sources\drv_i2c\drv_hdc1050</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_i2c\drv_lis3dh\LIS3DH.c">
+      <Filter>Source Files\Sources\drv_i2c\drv_lis3dh</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_i2c\drv_tmp431\DrvTmp431.c">
+      <Filter>Source Files\Sources\drv_i2c\drv_tmp431</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_i2c\ds137n\ds137n.c">
+      <Filter>Source Files\Sources\drv_i2c\ds137n</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_int_uart\DrvUart.c">
+      <Filter>Source Files\Sources\drv_int_uart</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_is25\drv_is25.c">
+      <Filter>Source Files\Sources\drv_is25</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_is25\ExtFlash.c">
+      <Filter>Source Files\Sources\drv_is25</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\drv_is25\temperature.c">
+      <Filter>Source Files\Sources\drv_is25</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\eventlog_platform\EventLog.c">
+      <Filter>Source Files\Sources\eventlog_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\port\port.c">
+      <Filter>Source Files\Sources\freertos_platform\port</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\croutine.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\event_groups.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\heap_1.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\heap_2.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\heap_3.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\heap_4.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\heap_5.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\list.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\queue.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\tasks.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\src\timers.c">
+      <Filter>Source Files\Sources\freertos_platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\KSDK1.c">
+      <Filter>Source Files\Sources\freertos_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_platform\UTIL1.c">
+      <Filter>Source Files\Sources\freertos_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_RTT.c">
+      <Filter>Source Files\Sources\freertos_sysview_platform\SEGGER</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_SYSVIEW.c">
+      <Filter>Source Files\Sources\freertos_sysview_platform\SEGGER</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\freertos_sysview_platform\SEGGER_SYSVIEW_FreeRTOS.c">
+      <Filter>Source Files\Sources\freertos_sysview_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\gnss_platform\gnssDA.c">
+      <Filter>Source Files\Sources\gnss_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\gnss_platform\gnssIo.c">
+      <Filter>Source Files\Sources\gnss_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\gnss_platform\gnssMT3333.c">
+      <Filter>Source Files\Sources\gnss_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\gnss_platform\taskGnss.c">
+      <Filter>Source Files\Sources\gnss_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\idef_proto2_platform\pb_common.c">
+      <Filter>Source Files\Sources\idef_proto2_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\idef_proto2_platform\pb_decode.c">
+      <Filter>Source Files\Sources\idef_proto2_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\idef_proto2_platform\pb_encode.c">
+      <Filter>Source Files\Sources\idef_proto2_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\idef_svccommon_platform\svccommon.pb.c">
+      <Filter>Source Files\Sources\idef_svccommon_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\idef_svcdata_platform\svcdata.pb.c">
+      <Filter>Source Files\Sources\idef_svcdata_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\idef_svcfirmware_platform\svcfirmware.pb.c">
+      <Filter>Source Files\Sources\idef_svcfirmware_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\measure_NEW\DacWaveform.c">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\measure_NEW\PassRailAnalogCtrl.c">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\measure_NEW\PassRailDSP.c">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\measure_NEW\PassRailDSP_MVP.c">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\measure_NEW\PassRailMeasure.c">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\measure_NEW\xTaskMeasure.c">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\modem_platform\Modem.c">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\modem_platform\ModemCLI.c">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\modem_platform\ModemIo.c">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\modem_platform\xTaskModem.c">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg.c">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform\msg</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg_PubAlive.c">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform\msg</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg_PubData.c">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform\msg</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\svc_mqtt_data_platform\SvcData.c">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\svc_mqtt_data_platform\SvcDataCLI.c">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\svc_mqtt_firmware_platform\SvcMqttFirmware.c">
+      <Filter>Source Files\Sources\svc_mqtt_firmware_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\utils_platform\CRC.c">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\utils_platform\CS1.c">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\utils_platform\flash.c">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\utils_platform\HF.c">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\utils_platform\Log.c">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\utils_platform\printgdf.c">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\utils_platform\serialize.c">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\utils_platform\Timer.c">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\app\FCCTest\FccTest.h">
+      <Filter>Source Files\Sources\app\FCCTest</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\alarms.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\EnergyMonitor.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\ephemeris.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\Measurement.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\nfc.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\nfc_cli.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\schedule.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\selfTest.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\Vbat.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\xTaskApp.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\xTaskAppCommsTest.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\xTaskAppEvent.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\xTaskAppGNSS.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\xTaskAppOta.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\app\xTaskAppRtc.h">
+      <Filter>Source Files\Sources\app</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configBootloader.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configCLI.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configComm.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configData.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configFeatures.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configGnss.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configIDEF.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configIDEFParam.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configLog.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configModem.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configMQTT.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configPinNames.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\configSvcData.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\FreeRTOSConfig.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\SEGGER_RTT_Conf.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\SEGGER_SYSVIEW_Conf.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\config\system_MK24F12.h">
+      <Filter>Source Files\Sources\config</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\cunit_tests\UnitTest.h">
+      <Filter>Source Files\Sources\cunit_tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\Device.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\Harvester.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\NvmCalib.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\NvmConfig.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\NvmData.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\pin_mux.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\PinConfig.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\PinDefs.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\PowerControl.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\PowerOffFailsafe.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\xTaskDevice.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\xTaskDeviceEvent.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\device\xTaskWatchdog.h">
+      <Filter>Source Files\Sources\device</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_i2c\i2c.h">
+      <Filter>Source Files\Sources\drv_i2c</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\hw_init\PMIC_UART.h">
+      <Filter>Source Files\Sources\hw_init</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\hw_init\rtc.h">
+      <Filter>Source Files\Sources\hw_init</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\hw_init\TestUART.h">
+      <Filter>Source Files\Sources\hw_init</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\PMIC\convert_junit.h">
+      <Filter>Source Files\Sources\PMIC</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\PMIC\pmic.h">
+      <Filter>Source Files\Sources\PMIC</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\PMIC\pmic_elogs.h">
+      <Filter>Source Files\Sources\PMIC</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\boardSpecificCLI.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\crc.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\errorcodes.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Events.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\image.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\imageTypes.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Insight.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\linker.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Resources.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\utils.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\xTaskDefs.h">
+      <Filter>Source Files\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\CMSIS\Include\arm_common_tables.h">
+      <Filter>Source Files\SDK\platform\CMSIS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\CMSIS\Include\arm_const_structs.h">
+      <Filter>Source Files\SDK\platform\CMSIS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\CMSIS\Include\arm_math.h">
+      <Filter>Source Files\SDK\platform\CMSIS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\CMSIS\Include\core_cm4.h">
+      <Filter>Source Files\SDK\platform\CMSIS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\CMSIS\Include\core_cmFunc.h">
+      <Filter>Source Files\SDK\platform\CMSIS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\CMSIS\Include\core_cmInstr.h">
+      <Filter>Source Files\SDK\platform\CMSIS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\CMSIS\Include\core_cmSimd.h">
+      <Filter>Source Files\SDK\platform\CMSIS\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\devices\MK24F12\include\fsl_bitaccess.h">
+      <Filter>Source Files\SDK\platform\devices\MK24F12\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\devices\MK24F12\include\MK24F12.h">
+      <Filter>Source Files\SDK\platform\devices\MK24F12\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\devices\MK24F12\include\MK24F12_extension.h">
+      <Filter>Source Files\SDK\platform\devices\MK24F12\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\devices\MK24F12\include\MK24F12_features.h">
+      <Filter>Source Files\SDK\platform\devices\MK24F12\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\devices\fsl_device_registers.h">
+      <Filter>Source Files\SDK\platform\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\devices\startup.h">
+      <Filter>Source Files\SDK\platform\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_adc16_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dac_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_edma_master_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_edma_shared_function.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_edma_slave_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_master_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_shared_function.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_slave_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_edma_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_edma_request.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_ftm_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_gpio_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_i2c_master_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_i2c_shared_function.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_i2c_slave_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_pdb_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_rtc_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_uart_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_vref_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_wdog_driver.h">
+      <Filter>Source Files\SDK\platform\drivers\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\include\FTFx_KX_flash_config.h">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\include\SSD_FTFx.h">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\include\SSD_FTFx_Common.h">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\include\SSD_FTFx_Internal.h">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\include\SSD_Types.h">
+      <Filter>Source Files\SDK\platform\drivers\src\flash\c90TFS\drvsrc\include</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_adc16_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_dac_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_dmamux_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_dspi_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_edma_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_ftm_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_gpio_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_i2c_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_llwu_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_mcg_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_mcg_hal_modes.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_osc_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_pdb_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_pmc_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_port_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_rcm_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_rtc_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_sim_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_smc_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_uart_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_vref_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\inc\fsl_wdog_hal.h">
+      <Filter>Source Files\SDK\platform\hal\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\hal\src\sim\MK24F12\fsl_sim_hal_MK24F12.h">
+      <Filter>Source Files\SDK\platform\hal\src\sim\MK24F12</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\osa\inc\fsl_os_abstraction.h">
+      <Filter>Source Files\SDK\platform\osa\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\osa\inc\fsl_os_abstraction_bm.h">
+      <Filter>Source Files\SDK\platform\osa\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\osa\inc\fsl_os_abstraction_free_rtos.h">
+      <Filter>Source Files\SDK\platform\osa\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\system\inc\fsl_clock_manager.h">
+      <Filter>Source Files\SDK\platform\system\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\system\inc\fsl_interrupt_manager.h">
+      <Filter>Source Files\SDK\platform\system\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\system\inc\fsl_power_manager.h">
+      <Filter>Source Files\SDK\platform\system\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\system\src\clock\MK24F12\fsl_clock_MK24F12.h">
+      <Filter>Source Files\SDK\platform\system\src\clock\MK24F12</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\system\src\power\fsl_power_manager_common.h">
+      <Filter>Source Files\SDK\platform\system\src\power</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\utilities\inc\fsl_debug_console.h">
+      <Filter>Source Files\SDK\platform\utilities\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\utilities\inc\fsl_misc_utilities.h">
+      <Filter>Source Files\SDK\platform\utilities\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\platform\utilities\src\print_scan.h">
+      <Filter>Source Files\SDK\platform\utilities\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\cli_platform\binaryCLI.h">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\cli_platform\binaryCLI_Task.h">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\cli_platform\CLIcmd.h">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\cli_platform\CLIio.h">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\cli_platform\COBS.h">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\cli_platform\json.h">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\cli_platform\xTaskCLI.h">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\cli_platform\xTaskCLIEvent.h">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttclientc\MQTTClient.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttclientc</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttclientc</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS_lwIP.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttclientc</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS_Modem.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttclientc</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttclientc\MQTTNetwork.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttclientc</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTConnect.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTFormat.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTPacket.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTPublish.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTSubscribe.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTUnsubscribe.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\StackTrace.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform\mqttpacket</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\commCLI.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\IComm.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\TaskComm.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\TaskCommEvent.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\comm_mqtt\TaskCommInt.h">
+      <Filter>Source Files\Sources\comm_mqtt_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\datastore_platform\DataDef.h">
+      <Filter>Source Files\Sources\datastore_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\datastore_platform\DataStore.h">
+      <Filter>Source Files\Sources\datastore_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_ad7766\AD7766_Common.h">
+      <Filter>Source Files\Sources\drv_ad7766</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_ad7766\AD7766_DMA.h">
+      <Filter>Source Files\Sources\drv_ad7766</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_ad7766\AD7766_Intrpt.h">
+      <Filter>Source Files\Sources\drv_ad7766</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_ad7766\AdcApiDefs.h">
+      <Filter>Source Files\Sources\drv_ad7766</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_i2c\drv_hdc1050\hdc1050.h">
+      <Filter>Source Files\Sources\drv_i2c\drv_hdc1050</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_i2c\drv_hdc1050\hdc1050_fsl_i2c_master_driver.h">
+      <Filter>Source Files\Sources\drv_i2c\drv_hdc1050</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_i2c\drv_lis3dh\LIS3DH.h">
+      <Filter>Source Files\Sources\drv_i2c\drv_lis3dh</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_i2c\drv_tmp431\DrvTmp431.h">
+      <Filter>Source Files\Sources\drv_i2c\drv_tmp431</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_i2c\ds137n\ds137n.h">
+      <Filter>Source Files\Sources\drv_i2c\ds137n</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_int_uart\DrvUart.h">
+      <Filter>Source Files\Sources\drv_int_uart</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_is25\drv_is25.h">
+      <Filter>Source Files\Sources\drv_is25</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_is25\ExtFlash.h">
+      <Filter>Source Files\Sources\drv_is25</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\drv_is25\temperature.h">
+      <Filter>Source Files\Sources\drv_is25</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\eventlog_platform\EventLog.h">
+      <Filter>Source Files\Sources\eventlog_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\croutine.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\deprecated_definitions.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\event_groups.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\FreeRTOS.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\list.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\mpu_wrappers.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\portable.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\projdefs.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\queue.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\semphr.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\StackMacros.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\task.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\include\timers.h">
+      <Filter>Source Files\Sources\freertos_platform\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\port\portmacro.h">
+      <Filter>Source Files\Sources\freertos_platform\port</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\port\portTicks.h">
+      <Filter>Source Files\Sources\freertos_platform\port</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\KSDK1.h">
+      <Filter>Source Files\Sources\freertos_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\PE_KSDK_Types.h">
+      <Filter>Source Files\Sources\freertos_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_platform\UTIL1.h">
+      <Filter>Source Files\Sources\freertos_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER\SEGGER.h">
+      <Filter>Source Files\Sources\freertos_sysview_platform\SEGGER</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_RTT.h">
+      <Filter>Source Files\Sources\freertos_sysview_platform\SEGGER</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_SYSVIEW.h">
+      <Filter>Source Files\Sources\freertos_sysview_platform\SEGGER</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_SYSVIEW_ConfDefaults.h">
+      <Filter>Source Files\Sources\freertos_sysview_platform\SEGGER</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_SYSVIEW_Int.h">
+      <Filter>Source Files\Sources\freertos_sysview_platform\SEGGER</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_sysview_platform\Global.h">
+      <Filter>Source Files\Sources\freertos_sysview_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER_SYSVIEW_FreeRTOS.h">
+      <Filter>Source Files\Sources\freertos_sysview_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\gnss_platform\gnssIo.h">
+      <Filter>Source Files\Sources\gnss_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\gnss_platform\gnssMT3333.h">
+      <Filter>Source Files\Sources\gnss_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\gnss_platform\taskGnss.h">
+      <Filter>Source Files\Sources\gnss_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\gnss_platform\taskGnssEvent.h">
+      <Filter>Source Files\Sources\gnss_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\idef_proto2_platform\pb.h">
+      <Filter>Source Files\Sources\idef_proto2_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\idef_proto2_platform\pb_common.h">
+      <Filter>Source Files\Sources\idef_proto2_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\idef_proto2_platform\pb_decode.h">
+      <Filter>Source Files\Sources\idef_proto2_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\idef_proto2_platform\pb_encode.h">
+      <Filter>Source Files\Sources\idef_proto2_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\idef_svccommon_platform\svccommon.pb.h">
+      <Filter>Source Files\Sources\idef_svccommon_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\idef_svcdata_platform\svcdata.pb.h">
+      <Filter>Source Files\Sources\idef_svcdata_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\idef_svcfirmware_platform\svcfirmware.pb.h">
+      <Filter>Source Files\Sources\idef_svcfirmware_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\measure_NEW\DacWaveform.h">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\measure_NEW\PassRailAnalogCtrl.h">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\measure_NEW\PassRailDSP.h">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\measure_NEW\PassRailDSP_MVP.h">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\measure_NEW\PassRailMeasure.h">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\measure_NEW\xTaskMeasure.h">
+      <Filter>Source Files\Sources\measure_NEW</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\modem_platform\Modem.h">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\modem_platform\ModemCLI.h">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\modem_platform\ModemIo.h">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\modem_platform\xTaskModem.h">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\modem_platform\xTaskModemEvent.h">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg.h">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform\msg</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg_PubAlive.h">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform\msg</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg_PubData.h">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform\msg</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\svc_mqtt_data_platform\ISvcData.h">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\svc_mqtt_data_platform\SvcData.h">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\svc_mqtt_data_platform\SvcDataCLI.h">
+      <Filter>Source Files\Sources\svc_mqtt_data_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\svc_mqtt_firmware_platform\ISvcFirmware.h">
+      <Filter>Source Files\Sources\svc_mqtt_firmware_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\svc_mqtt_firmware_platform\SvcMqttFirmware.h">
+      <Filter>Source Files\Sources\svc_mqtt_firmware_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\utils_platform\Convert.h">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\utils_platform\CS1.h">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\utils_platform\flash.h">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\utils_platform\HF.h">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\utils_platform\Log.h">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\utils_platform\printgdf.h">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\utils_platform\serialize.h">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\utils_platform\Timer.h">
+      <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\cli_platform\configCLI.c_example">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </None>
+    <None Include="Sources\cli_platform\configCLI.h_example">
+      <Filter>Source Files\Sources\cli_platform</Filter>
+    </None>
+    <None Include="Sources\freertos_platform\config\gcc\FreeRTOSConfig.h_template">
+      <Filter>Source Files\Sources\freertos_platform\config\gcc</Filter>
+    </None>
+    <None Include="Sources\freertos_platform\port\portasm.s">
+      <Filter>Source Files\Sources\freertos_platform\port</Filter>
+    </None>
+    <None Include="Sources\freertos_platform\FreeRTOS_Components.peb">
+      <Filter>Source Files\Sources\freertos_platform</Filter>
+    </None>
+    <None Include="Sources\freertos_platform\RTOS.c_gen">
+      <Filter>Source Files\Sources\freertos_platform</Filter>
+    </None>
+    <None Include="Sources\freertos_platform\RTOS.h_gen">
+      <Filter>Source Files\Sources\freertos_platform</Filter>
+    </None>
+    <None Include="Sources\freertos_sysview_platform\Config\SEGGER_RTT_Conf.h_template">
+      <Filter>Source Files\Sources\freertos_sysview_platform\Config</Filter>
+    </None>
+    <None Include="Sources\freertos_sysview_platform\Config\SEGGER_SYSVIEW_Conf.h_template">
+      <Filter>Source Files\Sources\freertos_sysview_platform\Config</Filter>
+    </None>
+    <None Include="Sources\freertos_sysview_platform\Config\SEGGER_SYSVIEW_Config_FreeRTOS.c_template">
+      <Filter>Source Files\Sources\freertos_sysview_platform\Config</Filter>
+    </None>
+    <None Include="Sources\gnss_platform\configGnss.c_example">
+      <Filter>Source Files\Sources\gnss_platform</Filter>
+    </None>
+    <None Include="Sources\gnss_platform\configGnss.h_example">
+      <Filter>Source Files\Sources\gnss_platform</Filter>
+    </None>
+    <None Include="Sources\modem_platform\configModem.c_example">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </None>
+    <None Include="Sources\modem_platform\configModem.h_example">
+      <Filter>Source Files\Sources\modem_platform</Filter>
+    </None>
+  </ItemGroup>
+</Project>

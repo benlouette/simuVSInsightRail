@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{964386b8-1950-4616-a848-7244510e4db6}</ProjectGuid>
+    <RootNamespace>simuInsightRail</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;FSL_OSA_BM_TIMER_CONFIG=0;FSL_RTOS_FREE_RTOS;PASSRAIL_DSP_NEW2;DEBUG;COMPILE_VERSION_MAJOR=1;COMPILE_VERSION_MINOR=1;"FSL_OSA_BM_TIMER_CONFIG=0";"CPU_MK24FN1M0VDC12";ARM_MATH_CM4;__FPU_PRESENT;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./;SDK;Sources;SDK/platform;SDK/platform/CMSIS;SDK/platform/devices;SDK/platform/drivers;SDK/platform/hal;SDK/platform/osa;SDK/platform/system;SDK/platform/utilities;SDK/platform/CMSIS/Include;SDK/platform/devices/MK24F12;SDK/platform/devices/MK24F12/include;SDK/platform/devices/MK24F12/startup;SDK/platform/devices/MK24F12/startup/gcc;SDK/platform/drivers/inc;SDK/platform/drivers/src;SDK/platform/drivers/src/adc16;SDK/platform/drivers/src/dac;SDK/platform/drivers/src/dspi;SDK/platform/drivers/src/edma;SDK/platform/drivers/src/flash;SDK/platform/drivers/src/ftm;SDK/platform/drivers/src/gpio;SDK/platform/drivers/src/i2c;SDK/platform/drivers/src/pdb;SDK/platform/drivers/src/uart;SDK/platform/drivers/src/vref;SDK/platform/drivers/src/wdog;SDK/platform/drivers/src/flash/C90TFS;SDK/platform/drivers/src/flash/C90TFS/drvsrc;SDK/platform/drivers/src/flash/C90TFS/drvsrc/include;SDK/platform/drivers/src/flash/C90TFS/drvsrc/source;SDK/platform/hal/inc;SDK/platform/hal/src;SDK/platform/hal/src/adc16;SDK/platform/hal/src/dac;SDK/platform/hal/src/dmamux;SDK/platform/hal/src/dspi;SDK/platform/hal/src/edma;SDK/platform/hal/src/ftm;SDK/platform/hal/src/gpio;SDK/platform/hal/src/i2c;SDK/platform/hal/src/mcg;SDK/platform/hal/src/osc;SDK/platform/hal/src/pdb;SDK/platform/hal/src/port;SDK/platform/hal/src/rtc;SDK/platform/hal/src/sim;SDK/platform/hal/src/uart;SDK/platform/hal/src/vref;SDK/platform/hal/src/wdog;SDK/platform/hal/src/sim/MK24F12;SDK/platform/osa/inc;SDK/platform/osa/src;SDK/platform/system/inc;SDK/platform/system/src;SDK/platform/system/src/clock;SDK/platform/system/src/interrupt;SDK/platform/system/src/power;SDK/platform/system/src/clock/MK24F12;SDK/platform/utilities/inc;SDK/platform/utilities/src;Sources/app;Sources/cli_platform;Sources/comm_mqtt;Sources/config;Sources/cunit_tests;Sources/datastore_platform;Sources/device;Sources/drv_ad7766;Sources/drv_i2c;Sources/drv_int_uart;Sources/drv_is25;Sources/eventlog_platform;Sources/freertos_platform;Sources/freertos_sysview_platform;Sources/gnss_platform;Sources/hw_init;Sources/idef_proto2_platform;Sources/idef_svccommon_platform;Sources/idef_svcdata_platform;Sources/idef_svcfirmware_platform;Sources/measure_NEW;Sources/modem_platform;Sources/PMIC;Sources/svc_mqtt_data_platform;Sources/svc_mqtt_firmware_platform;Sources/utils_platform;Sources/app/Ephemeris;Sources/app/FCCTest;Sources/app/Measurement;Sources/app/NFC;Sources/app/Schedule;Sources/app/SelfTest;Sources/comm_mqtt/mqttclientc;Sources/comm_mqtt/mqttpacket;Sources/drv_i2c/drv_hdc1050;Sources/drv_i2c/drv_lis3dh;Sources/drv_i2c/drv_tmp431;Sources/drv_i2c/ds137n;Sources/freertos_platform/config;Sources/freertos_platform/include;Sources/freertos_platform/port;Sources/freertos_platform/src;Sources/freertos_platform/config/gcc;Sources/freertos_sysview_platform/Config;Sources/freertos_sysview_platform/SEGGER;Sources/svc_mqtt_data_platform/msg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cunit.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>SDK;Sources;SDK/platform;SDK/platform/CMSIS;SDK/platform/devices;SDK/platform/drivers;SDK/platform/hal;SDK/platform/osa;SDK/platform/system;SDK/platform/utilities;SDK/platform/CMSIS/Include;SDK/platform/devices/MK24F12;SDK/platform/devices/MK24F12/include;SDK/platform/devices/MK24F12/startup;SDK/platform/devices/MK24F12/startup/gcc;SDK/platform/drivers/inc;SDK/platform/drivers/src;SDK/platform/drivers/src/adc16;SDK/platform/drivers/src/dac;SDK/platform/drivers/src/dspi;SDK/platform/drivers/src/edma;SDK/platform/drivers/src/flash;SDK/platform/drivers/src/ftm;SDK/platform/drivers/src/gpio;SDK/platform/drivers/src/i2c;SDK/platform/drivers/src/pdb;SDK/platform/drivers/src/uart;SDK/platform/drivers/src/vref;SDK/platform/drivers/src/wdog;SDK/platform/drivers/src/flash/C90TFS;SDK/platform/drivers/src/flash/C90TFS/drvsrc;SDK/platform/drivers/src/flash/C90TFS/drvsrc/include;SDK/platform/drivers/src/flash/C90TFS/drvsrc/source;SDK/platform/hal/inc;SDK/platform/hal/src;SDK/platform/hal/src/adc16;SDK/platform/hal/src/dac;SDK/platform/hal/src/dmamux;SDK/platform/hal/src/dspi;SDK/platform/hal/src/edma;SDK/platform/hal/src/ftm;SDK/platform/hal/src/gpio;SDK/platform/hal/src/i2c;SDK/platform/hal/src/mcg;SDK/platform/hal/src/osc;SDK/platform/hal/src/pdb;SDK/platform/hal/src/port;SDK/platform/hal/src/rtc;SDK/platform/hal/src/sim;SDK/platform/hal/src/uart;SDK/platform/hal/src/vref;SDK/platform/hal/src/wdog;SDK/platform/hal/src/sim/MK24F12;SDK/platform/osa/inc;SDK/platform/osa/src;SDK/platform/system/inc;SDK/platform/system/src;SDK/platform/system/src/clock;SDK/platform/system/src/interrupt;SDK/platform/system/src/power;SDK/platform/system/src/clock/MK24F12;SDK/platform/utilities/inc;SDK/platform/utilities/src;Sources/app;Sources/config;Sources/cunit_tests;Sources/device;Sources/drv_i2c;Sources/hw_init;Sources/PMIC;Sources/app/Ephemeris;Sources/app/FCCTest;Sources/app/Measurement;Sources/app/NFC;Sources/app/Schedule;Sources/app/SelfTest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="SDK\platform\devices\MK24F12\startup\system_MK24F12.c" />
+    <ClCompile Include="SDK\platform\devices\startup.c" />
+    <ClCompile Include="SDK\platform\drivers\src\adc16\fsl_adc16_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\adc16\fsl_adc16_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dac\fsl_dac_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dac\fsl_dac_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dac\fsl_dac_irq.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dac\fsl_dac_lpm_callback.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_edma_irq.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_edma_master_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_edma_shared_function.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_edma_slave_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_irq.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_master_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_shared_function.c" />
+    <ClCompile Include="SDK\platform\drivers\src\dspi\fsl_dspi_slave_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\edma\fsl_edma_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\edma\fsl_edma_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\edma\fsl_edma_irq.c" />
+    <ClCompile Include="SDK\platform\drivers\src\edma\fsl_edma_lpm_callback.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\CopyToRam.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\DEFlashPartition.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\DFlashGetProtection.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\DFlashSetProtection.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\EEEWrite.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\EERAMGetProtection.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\EERAMSetProtection.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashCheckSum.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashCommandSequence.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashEraseAllBlock.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashEraseBlock.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashEraseResume.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashEraseSector.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashEraseSuspend.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashGetSecurityState.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashInit.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashProgram.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashProgramCheck.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashProgramOnce.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashProgramSection.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashReadOnce.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashReadResource.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashSecurityBypass.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashVerifyAllBlock.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashVerifyBlock.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\FlashVerifySection.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\PFlashGetProtection.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\PFlashSetProtection.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\PFlashSwap.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\PFlashSwapCtl.c" />
+    <ClCompile Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\source\SetEEEEnable.c" />
+    <ClCompile Include="SDK\platform\drivers\src\ftm\fsl_ftm_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\ftm\fsl_ftm_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\ftm\fsl_ftm_irq.c" />
+    <ClCompile Include="SDK\platform\drivers\src\gpio\fsl_gpio_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\gpio\fsl_gpio_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\i2c\fsl_i2c_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\i2c\fsl_i2c_master_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\i2c\fsl_i2c_shared_function.c" />
+    <ClCompile Include="SDK\platform\drivers\src\i2c\fsl_i2c_slave_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\pdb\fsl_pdb_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\pdb\fsl_pdb_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\pdb\fsl_pdb_irq.c" />
+    <ClCompile Include="SDK\platform\drivers\src\pdb\fsl_pdb_lpm_callback.c" />
+    <ClCompile Include="SDK\platform\drivers\src\rtc\fsl_rtc_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\rtc\fsl_rtc_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\uart\fsl_uart_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\uart\fsl_uart_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\vref\fsl_vref_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\vref\fsl_vref_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_common.c" />
+    <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_driver.c" />
+    <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_irq.c" />
+    <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_lpm_callback.c" />
+    <ClCompile Include="SDK\platform\hal\src\adc16\fsl_adc16_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\dac\fsl_dac_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\dmamux\fsl_dmamux_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\dspi\fsl_dspi_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\edma\fsl_edma_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\ftm\fsl_ftm_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\gpio\fsl_gpio_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\i2c\fsl_i2c_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\mcg\fsl_mcg_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\mcg\fsl_mcg_hal_modes.c" />
+    <ClCompile Include="SDK\platform\hal\src\osc\fsl_osc_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\pdb\fsl_pdb_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\port\fsl_port_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\rtc\fsl_rtc_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\sim\MK24F12\fsl_sim_hal_MK24F12.c" />
+    <ClCompile Include="SDK\platform\hal\src\uart\fsl_uart_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\vref\fsl_vref_hal.c" />
+    <ClCompile Include="SDK\platform\hal\src\wdog\fsl_wdog_hal.c" />
+    <ClCompile Include="SDK\platform\osa\src\fsl_os_abstraction_bm.c" />
+    <ClCompile Include="SDK\platform\osa\src\fsl_os_abstraction_free_rtos.c" />
+    <ClCompile Include="SDK\platform\system\src\clock\fsl_clock_manager.c" />
+    <ClCompile Include="SDK\platform\system\src\clock\fsl_clock_manager_common.c" />
+    <ClCompile Include="SDK\platform\system\src\clock\MK24F12\fsl_clock_MK24F12.c" />
+    <ClCompile Include="SDK\platform\system\src\interrupt\fsl_interrupt_manager.c" />
+    <ClCompile Include="SDK\platform\system\src\power\fsl_power_manager.c" />
+    <ClCompile Include="SDK\platform\utilities\src\fsl_debug_console.c" />
+    <ClCompile Include="SDK\platform\utilities\src\fsl_misc_utilities.c" />
+    <ClCompile Include="SDK\platform\utilities\src\print_scan.c" />
+    <ClCompile Include="simuInsightRail.cpp" />
+    <ClCompile Include="Sources\app\alarms.c" />
+    <ClCompile Include="Sources\app\EnergyMonitor.c" />
+    <ClCompile Include="Sources\app\Ephemeris\ephemeris.c" />
+    <ClCompile Include="Sources\app\FCCTest\FccTest.c" />
+    <ClCompile Include="Sources\app\Measurement\Measurement.c" />
+    <ClCompile Include="Sources\app\NFC\nfc.c" />
+    <ClCompile Include="Sources\app\NFC\nfc_cli.c" />
+    <ClCompile Include="Sources\app\Schedule\schedule.c" />
+    <ClCompile Include="Sources\app\SelfTest\selfTest.c" />
+    <ClCompile Include="Sources\app\Vbat.c" />
+    <ClCompile Include="Sources\app\xTaskApp.c" />
+    <ClCompile Include="Sources\app\xTaskAppCommsTest.c" />
+    <ClCompile Include="Sources\app\xTaskAppGNSS.c" />
+    <ClCompile Include="Sources\app\xTaskAppOta.c" />
+    <ClCompile Include="Sources\app\xTaskAppRtc.c" />
+    <ClCompile Include="Sources\boardSpecificCLI.c" />
+    <ClCompile Include="Sources\cli_platform\binaryCLI.c" />
+    <ClCompile Include="Sources\cli_platform\binaryCLI_Task.c" />
+    <ClCompile Include="Sources\cli_platform\CLIcmd.c" />
+    <ClCompile Include="Sources\cli_platform\CLIio.c" />
+    <ClCompile Include="Sources\cli_platform\COBS.c" />
+    <ClCompile Include="Sources\cli_platform\json.c" />
+    <ClCompile Include="Sources\cli_platform\xTaskCLI.c" />
+    <ClCompile Include="Sources\comm_mqtt\commCLI.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttclientc\MQTTClient.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS_lwIP.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS_Modem.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTConnectClient.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTConnectServer.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTDeserializePublish.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTFormat.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTPacket.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTSerializePublish.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTSubscribeClient.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTSubscribeServer.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTUnsubscribeClient.c" />
+    <ClCompile Include="Sources\comm_mqtt\mqttpacket\MQTTUnsubscribeServer.c" />
+    <ClCompile Include="Sources\comm_mqtt\TaskComm.c" />
+    <ClCompile Include="Sources\config\configBootloader.c" />
+    <ClCompile Include="Sources\config\configCLI.c" />
+    <ClCompile Include="Sources\config\configData.c" />
+    <ClCompile Include="Sources\config\configIDEF.c" />
+    <ClCompile Include="Sources\config\configIDEFParam.c" />
+    <ClCompile Include="Sources\config\configModem.c" />
+    <ClCompile Include="Sources\config\configMQTT.c" />
+    <ClCompile Include="Sources\config\configPinNames.c" />
+    <ClCompile Include="Sources\config\configRTOS.c" />
+    <ClCompile Include="Sources\config\configSvcData.c" />
+    <ClCompile Include="Sources\config\SEGGER_SYSVIEW_Config_FreeRTOS.c" />
+    <ClCompile Include="Sources\crc.c" />
+    <ClCompile Include="Sources\cunit_tests\TestSuite.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_Alarms.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_basic.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_binaryCLI.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_crc.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_DS1374.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_externalFlash.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_json.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_nfc.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_NvmConfig.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_pmic.c" />
+    <ClCompile Include="Sources\cunit_tests\UT_Temp.c" />
+    <ClCompile Include="Sources\datastore_platform\DataStore.c" />
+    <ClCompile Include="Sources\device\Device.c" />
+    <ClCompile Include="Sources\device\Harvester.c" />
+    <ClCompile Include="Sources\device\NvmCalib.c" />
+    <ClCompile Include="Sources\device\NvmConfig.c" />
+    <ClCompile Include="Sources\device\NvmData.c" />
+    <ClCompile Include="Sources\device\PinConfig.c" />
+    <ClCompile Include="Sources\device\pin_mux.c" />
+    <ClCompile Include="Sources\device\PowerControl.c" />
+    <ClCompile Include="Sources\device\PowerOffFailsafe.c" />
+    <ClCompile Include="Sources\device\xTaskDevice.c" />
+    <ClCompile Include="Sources\device\xTaskWatchdog.c" />
+    <ClCompile Include="Sources\drv_ad7766\AD7766_Common.c" />
+    <ClCompile Include="Sources\drv_ad7766\AD7766_DMA.c" />
+    <ClCompile Include="Sources\drv_ad7766\AD7766_Intrpt.c" />
+    <ClCompile Include="Sources\drv_i2c\drv_hdc1050\hdc1050.c" />
+    <ClCompile Include="Sources\drv_i2c\drv_hdc1050\hdc1050_fsl_i2c_master_driver.c" />
+    <ClCompile Include="Sources\drv_i2c\drv_lis3dh\LIS3DH.c" />
+    <ClCompile Include="Sources\drv_i2c\drv_tmp431\DrvTmp431.c" />
+    <ClCompile Include="Sources\drv_i2c\ds137n\ds137n.c" />
+    <ClCompile Include="Sources\drv_i2c\i2c.c" />
+    <ClCompile Include="Sources\drv_int_uart\DrvUart.c" />
+    <ClCompile Include="Sources\drv_is25\drv_is25.c" />
+    <ClCompile Include="Sources\drv_is25\ExtFlash.c" />
+    <ClCompile Include="Sources\drv_is25\temperature.c" />
+    <ClCompile Include="Sources\eventlog_platform\EventLog.c" />
+    <ClCompile Include="Sources\Events.c" />
+    <ClCompile Include="Sources\freertos_platform\KSDK1.c" />
+    <ClCompile Include="Sources\freertos_platform\port\port.c" />
+    <ClCompile Include="Sources\freertos_platform\src\croutine.c" />
+    <ClCompile Include="Sources\freertos_platform\src\event_groups.c" />
+    <ClCompile Include="Sources\freertos_platform\src\heap_1.c" />
+    <ClCompile Include="Sources\freertos_platform\src\heap_2.c" />
+    <ClCompile Include="Sources\freertos_platform\src\heap_3.c" />
+    <ClCompile Include="Sources\freertos_platform\src\heap_4.c" />
+    <ClCompile Include="Sources\freertos_platform\src\heap_5.c" />
+    <ClCompile Include="Sources\freertos_platform\src\list.c" />
+    <ClCompile Include="Sources\freertos_platform\src\queue.c" />
+    <ClCompile Include="Sources\freertos_platform\src\tasks.c" />
+    <ClCompile Include="Sources\freertos_platform\src\timers.c" />
+    <ClCompile Include="Sources\freertos_platform\UTIL1.c" />
+    <ClCompile Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_RTT.c" />
+    <ClCompile Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_SYSVIEW.c" />
+    <ClCompile Include="Sources\freertos_sysview_platform\SEGGER_SYSVIEW_FreeRTOS.c" />
+    <ClCompile Include="Sources\gnss_platform\gnssDA.c" />
+    <ClCompile Include="Sources\gnss_platform\gnssIo.c" />
+    <ClCompile Include="Sources\gnss_platform\gnssMT3333.c" />
+    <ClCompile Include="Sources\gnss_platform\taskGnss.c" />
+    <ClCompile Include="Sources\hw_init\PMIC_UART.c" />
+    <ClCompile Include="Sources\hw_init\rtc.c" />
+    <ClCompile Include="Sources\hw_init\TestUART.c" />
+    <ClCompile Include="Sources\idef_proto2_platform\pb_common.c" />
+    <ClCompile Include="Sources\idef_proto2_platform\pb_decode.c" />
+    <ClCompile Include="Sources\idef_proto2_platform\pb_encode.c" />
+    <ClCompile Include="Sources\idef_svccommon_platform\svccommon.pb.c" />
+    <ClCompile Include="Sources\idef_svcdata_platform\svcdata.pb.c" />
+    <ClCompile Include="Sources\idef_svcfirmware_platform\svcfirmware.pb.c" />
+    <ClCompile Include="Sources\image.c" />
+    <ClCompile Include="Sources\main.c" />
+    <ClCompile Include="Sources\measure_NEW\DacWaveform.c" />
+    <ClCompile Include="Sources\measure_NEW\PassRailAnalogCtrl.c" />
+    <ClCompile Include="Sources\measure_NEW\PassRailDSP.c" />
+    <ClCompile Include="Sources\measure_NEW\PassRailDSP_MVP.c" />
+    <ClCompile Include="Sources\measure_NEW\PassRailMeasure.c" />
+    <ClCompile Include="Sources\measure_NEW\xTaskMeasure.c" />
+    <ClCompile Include="Sources\modem_platform\Modem.c" />
+    <ClCompile Include="Sources\modem_platform\ModemCLI.c" />
+    <ClCompile Include="Sources\modem_platform\ModemIo.c" />
+    <ClCompile Include="Sources\modem_platform\xTaskModem.c" />
+    <ClCompile Include="Sources\PMIC\convert_junit.c" />
+    <ClCompile Include="Sources\PMIC\pmic.c" />
+    <ClCompile Include="Sources\Resources.c" />
+    <ClCompile Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg.c" />
+    <ClCompile Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg_PubAlive.c" />
+    <ClCompile Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg_PubData.c" />
+    <ClCompile Include="Sources\svc_mqtt_data_platform\SvcData.c" />
+    <ClCompile Include="Sources\svc_mqtt_data_platform\SvcDataCLI.c" />
+    <ClCompile Include="Sources\svc_mqtt_firmware_platform\SvcMqttFirmware.c" />
+    <ClCompile Include="Sources\utils.c" />
+    <ClCompile Include="Sources\utils_platform\CRC.c" />
+    <ClCompile Include="Sources\utils_platform\CS1.c" />
+    <ClCompile Include="Sources\utils_platform\flash.c" />
+    <ClCompile Include="Sources\utils_platform\HF.c" />
+    <ClCompile Include="Sources\utils_platform\Log.c" />
+    <ClCompile Include="Sources\utils_platform\printgdf.c" />
+    <ClCompile Include="Sources\utils_platform\serialize.c" />
+    <ClCompile Include="Sources\utils_platform\Timer.c" />
+    <ClCompile Include="startup_MK24F12.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SDK\platform\CMSIS\Include\arm_common_tables.h" />
+    <ClInclude Include="SDK\platform\CMSIS\Include\arm_const_structs.h" />
+    <ClInclude Include="SDK\platform\CMSIS\Include\arm_math.h" />
+    <ClInclude Include="SDK\platform\CMSIS\Include\core_cm4.h" />
+    <ClInclude Include="SDK\platform\CMSIS\Include\core_cmFunc.h" />
+    <ClInclude Include="SDK\platform\CMSIS\Include\core_cmInstr.h" />
+    <ClInclude Include="SDK\platform\CMSIS\Include\core_cmSimd.h" />
+    <ClInclude Include="SDK\platform\devices\fsl_device_registers.h" />
+    <ClInclude Include="SDK\platform\devices\MK24F12\include\fsl_bitaccess.h" />
+    <ClInclude Include="SDK\platform\devices\MK24F12\include\MK24F12.h" />
+    <ClInclude Include="SDK\platform\devices\MK24F12\include\MK24F12_extension.h" />
+    <ClInclude Include="SDK\platform\devices\MK24F12\include\MK24F12_features.h" />
+    <ClInclude Include="SDK\platform\devices\startup.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_adc16_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dac_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_edma_master_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_edma_shared_function.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_edma_slave_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_master_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_shared_function.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_dspi_slave_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_edma_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_edma_request.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_ftm_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_gpio_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_i2c_master_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_i2c_shared_function.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_i2c_slave_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_pdb_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_rtc_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_uart_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_vref_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\inc\fsl_wdog_driver.h" />
+    <ClInclude Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\include\FTFx_KX_flash_config.h" />
+    <ClInclude Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\include\SSD_FTFx.h" />
+    <ClInclude Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\include\SSD_FTFx_Common.h" />
+    <ClInclude Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\include\SSD_FTFx_Internal.h" />
+    <ClInclude Include="SDK\platform\drivers\src\flash\C90TFS\drvsrc\include\SSD_Types.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_adc16_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_dac_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_dmamux_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_dspi_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_edma_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_ftm_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_gpio_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_i2c_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_llwu_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_mcg_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_mcg_hal_modes.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_osc_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_pdb_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_pmc_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_port_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_rcm_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_rtc_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_sim_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_smc_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_uart_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_vref_hal.h" />
+    <ClInclude Include="SDK\platform\hal\inc\fsl_wdog_hal.h" />
+    <ClInclude Include="SDK\platform\hal\src\sim\MK24F12\fsl_sim_hal_MK24F12.h" />
+    <ClInclude Include="SDK\platform\osa\inc\fsl_os_abstraction.h" />
+    <ClInclude Include="SDK\platform\osa\inc\fsl_os_abstraction_bm.h" />
+    <ClInclude Include="SDK\platform\osa\inc\fsl_os_abstraction_free_rtos.h" />
+    <ClInclude Include="SDK\platform\system\inc\fsl_clock_manager.h" />
+    <ClInclude Include="SDK\platform\system\inc\fsl_interrupt_manager.h" />
+    <ClInclude Include="SDK\platform\system\inc\fsl_power_manager.h" />
+    <ClInclude Include="SDK\platform\system\src\clock\MK24F12\fsl_clock_MK24F12.h" />
+    <ClInclude Include="SDK\platform\system\src\power\fsl_power_manager_common.h" />
+    <ClInclude Include="SDK\platform\utilities\inc\fsl_debug_console.h" />
+    <ClInclude Include="SDK\platform\utilities\inc\fsl_misc_utilities.h" />
+    <ClInclude Include="SDK\platform\utilities\src\print_scan.h" />
+    <ClInclude Include="Sources\app\alarms.h" />
+    <ClInclude Include="Sources\app\EnergyMonitor.h" />
+    <ClInclude Include="Sources\app\ephemeris.h" />
+    <ClInclude Include="Sources\app\FCCTest\FccTest.h" />
+    <ClInclude Include="Sources\app\Measurement.h" />
+    <ClInclude Include="Sources\app\nfc.h" />
+    <ClInclude Include="Sources\app\nfc_cli.h" />
+    <ClInclude Include="Sources\app\schedule.h" />
+    <ClInclude Include="Sources\app\selfTest.h" />
+    <ClInclude Include="Sources\app\Vbat.h" />
+    <ClInclude Include="Sources\app\xTaskApp.h" />
+    <ClInclude Include="Sources\app\xTaskAppCommsTest.h" />
+    <ClInclude Include="Sources\app\xTaskAppEvent.h" />
+    <ClInclude Include="Sources\app\xTaskAppGNSS.h" />
+    <ClInclude Include="Sources\app\xTaskAppOta.h" />
+    <ClInclude Include="Sources\app\xTaskAppRtc.h" />
+    <ClInclude Include="Sources\boardSpecificCLI.h" />
+    <ClInclude Include="Sources\cli_platform\binaryCLI.h" />
+    <ClInclude Include="Sources\cli_platform\binaryCLI_Task.h" />
+    <ClInclude Include="Sources\cli_platform\CLIcmd.h" />
+    <ClInclude Include="Sources\cli_platform\CLIio.h" />
+    <ClInclude Include="Sources\cli_platform\COBS.h" />
+    <ClInclude Include="Sources\cli_platform\json.h" />
+    <ClInclude Include="Sources\cli_platform\xTaskCLI.h" />
+    <ClInclude Include="Sources\cli_platform\xTaskCLIEvent.h" />
+    <ClInclude Include="Sources\comm_mqtt\commCLI.h" />
+    <ClInclude Include="Sources\comm_mqtt\IComm.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttclientc\MQTTClient.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS_lwIP.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttclientc\MQTTFreeRTOS_Modem.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttclientc\MQTTNetwork.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTConnect.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTFormat.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTPacket.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTPublish.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTSubscribe.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\MQTTUnsubscribe.h" />
+    <ClInclude Include="Sources\comm_mqtt\mqttpacket\StackTrace.h" />
+    <ClInclude Include="Sources\comm_mqtt\TaskComm.h" />
+    <ClInclude Include="Sources\comm_mqtt\TaskCommEvent.h" />
+    <ClInclude Include="Sources\comm_mqtt\TaskCommInt.h" />
+    <ClInclude Include="Sources\config\configBootloader.h" />
+    <ClInclude Include="Sources\config\configCLI.h" />
+    <ClInclude Include="Sources\config\configComm.h" />
+    <ClInclude Include="Sources\config\configData.h" />
+    <ClInclude Include="Sources\config\configFeatures.h" />
+    <ClInclude Include="Sources\config\configGnss.h" />
+    <ClInclude Include="Sources\config\configIDEF.h" />
+    <ClInclude Include="Sources\config\configIDEFParam.h" />
+    <ClInclude Include="Sources\config\configLog.h" />
+    <ClInclude Include="Sources\config\configModem.h" />
+    <ClInclude Include="Sources\config\configMQTT.h" />
+    <ClInclude Include="Sources\config\configPinNames.h" />
+    <ClInclude Include="Sources\config\configSvcData.h" />
+    <ClInclude Include="Sources\config\FreeRTOSConfig.h" />
+    <ClInclude Include="Sources\config\SEGGER_RTT_Conf.h" />
+    <ClInclude Include="Sources\config\SEGGER_SYSVIEW_Conf.h" />
+    <ClInclude Include="Sources\config\system_MK24F12.h" />
+    <ClInclude Include="Sources\crc.h" />
+    <ClInclude Include="Sources\cunit_tests\UnitTest.h" />
+    <ClInclude Include="Sources\datastore_platform\DataDef.h" />
+    <ClInclude Include="Sources\datastore_platform\DataStore.h" />
+    <ClInclude Include="Sources\device\Device.h" />
+    <ClInclude Include="Sources\device\Harvester.h" />
+    <ClInclude Include="Sources\device\NvmCalib.h" />
+    <ClInclude Include="Sources\device\NvmConfig.h" />
+    <ClInclude Include="Sources\device\NvmData.h" />
+    <ClInclude Include="Sources\device\PinConfig.h" />
+    <ClInclude Include="Sources\device\PinDefs.h" />
+    <ClInclude Include="Sources\device\pin_mux.h" />
+    <ClInclude Include="Sources\device\PowerControl.h" />
+    <ClInclude Include="Sources\device\PowerOffFailsafe.h" />
+    <ClInclude Include="Sources\device\xTaskDevice.h" />
+    <ClInclude Include="Sources\device\xTaskDeviceEvent.h" />
+    <ClInclude Include="Sources\device\xTaskWatchdog.h" />
+    <ClInclude Include="Sources\drv_ad7766\AD7766_Common.h" />
+    <ClInclude Include="Sources\drv_ad7766\AD7766_DMA.h" />
+    <ClInclude Include="Sources\drv_ad7766\AD7766_Intrpt.h" />
+    <ClInclude Include="Sources\drv_ad7766\AdcApiDefs.h" />
+    <ClInclude Include="Sources\drv_i2c\drv_hdc1050\hdc1050.h" />
+    <ClInclude Include="Sources\drv_i2c\drv_hdc1050\hdc1050_fsl_i2c_master_driver.h" />
+    <ClInclude Include="Sources\drv_i2c\drv_lis3dh\LIS3DH.h" />
+    <ClInclude Include="Sources\drv_i2c\drv_tmp431\DrvTmp431.h" />
+    <ClInclude Include="Sources\drv_i2c\ds137n\ds137n.h" />
+    <ClInclude Include="Sources\drv_i2c\i2c.h" />
+    <ClInclude Include="Sources\drv_int_uart\DrvUart.h" />
+    <ClInclude Include="Sources\drv_is25\drv_is25.h" />
+    <ClInclude Include="Sources\drv_is25\ExtFlash.h" />
+    <ClInclude Include="Sources\drv_is25\temperature.h" />
+    <ClInclude Include="Sources\errorcodes.h" />
+    <ClInclude Include="Sources\eventlog_platform\EventLog.h" />
+    <ClInclude Include="Sources\Events.h" />
+    <ClInclude Include="Sources\freertos_platform\include\croutine.h" />
+    <ClInclude Include="Sources\freertos_platform\include\deprecated_definitions.h" />
+    <ClInclude Include="Sources\freertos_platform\include\event_groups.h" />
+    <ClInclude Include="Sources\freertos_platform\include\FreeRTOS.h" />
+    <ClInclude Include="Sources\freertos_platform\include\list.h" />
+    <ClInclude Include="Sources\freertos_platform\include\mpu_wrappers.h" />
+    <ClInclude Include="Sources\freertos_platform\include\portable.h" />
+    <ClInclude Include="Sources\freertos_platform\include\projdefs.h" />
+    <ClInclude Include="Sources\freertos_platform\include\queue.h" />
+    <ClInclude Include="Sources\freertos_platform\include\semphr.h" />
+    <ClInclude Include="Sources\freertos_platform\include\StackMacros.h" />
+    <ClInclude Include="Sources\freertos_platform\include\task.h" />
+    <ClInclude Include="Sources\freertos_platform\include\timers.h" />
+    <ClInclude Include="Sources\freertos_platform\KSDK1.h" />
+    <ClInclude Include="Sources\freertos_platform\PE_KSDK_Types.h" />
+    <ClInclude Include="Sources\freertos_platform\port\portmacro.h" />
+    <ClInclude Include="Sources\freertos_platform\port\portTicks.h" />
+    <ClInclude Include="Sources\freertos_platform\UTIL1.h" />
+    <ClInclude Include="Sources\freertos_sysview_platform\Global.h" />
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER\SEGGER.h" />
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_RTT.h" />
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_SYSVIEW.h" />
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_SYSVIEW_ConfDefaults.h" />
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER\SEGGER_SYSVIEW_Int.h" />
+    <ClInclude Include="Sources\freertos_sysview_platform\SEGGER_SYSVIEW_FreeRTOS.h" />
+    <ClInclude Include="Sources\gnss_platform\gnssIo.h" />
+    <ClInclude Include="Sources\gnss_platform\gnssMT3333.h" />
+    <ClInclude Include="Sources\gnss_platform\taskGnss.h" />
+    <ClInclude Include="Sources\gnss_platform\taskGnssEvent.h" />
+    <ClInclude Include="Sources\hw_init\PMIC_UART.h" />
+    <ClInclude Include="Sources\hw_init\rtc.h" />
+    <ClInclude Include="Sources\hw_init\TestUART.h" />
+    <ClInclude Include="Sources\idef_proto2_platform\pb.h" />
+    <ClInclude Include="Sources\idef_proto2_platform\pb_common.h" />
+    <ClInclude Include="Sources\idef_proto2_platform\pb_decode.h" />
+    <ClInclude Include="Sources\idef_proto2_platform\pb_encode.h" />
+    <ClInclude Include="Sources\idef_svccommon_platform\svccommon.pb.h" />
+    <ClInclude Include="Sources\idef_svcdata_platform\svcdata.pb.h" />
+    <ClInclude Include="Sources\idef_svcfirmware_platform\svcfirmware.pb.h" />
+    <ClInclude Include="Sources\image.h" />
+    <ClInclude Include="Sources\imageTypes.h" />
+    <ClInclude Include="Sources\Insight.h" />
+    <ClInclude Include="Sources\linker.h" />
+    <ClInclude Include="Sources\measure_NEW\DacWaveform.h" />
+    <ClInclude Include="Sources\measure_NEW\PassRailAnalogCtrl.h" />
+    <ClInclude Include="Sources\measure_NEW\PassRailDSP.h" />
+    <ClInclude Include="Sources\measure_NEW\PassRailDSP_MVP.h" />
+    <ClInclude Include="Sources\measure_NEW\PassRailMeasure.h" />
+    <ClInclude Include="Sources\measure_NEW\xTaskMeasure.h" />
+    <ClInclude Include="Sources\modem_platform\Modem.h" />
+    <ClInclude Include="Sources\modem_platform\ModemCLI.h" />
+    <ClInclude Include="Sources\modem_platform\ModemIo.h" />
+    <ClInclude Include="Sources\modem_platform\xTaskModem.h" />
+    <ClInclude Include="Sources\modem_platform\xTaskModemEvent.h" />
+    <ClInclude Include="Sources\PMIC\convert_junit.h" />
+    <ClInclude Include="Sources\PMIC\pmic.h" />
+    <ClInclude Include="Sources\PMIC\pmic_elogs.h" />
+    <ClInclude Include="Sources\Resources.h" />
+    <ClInclude Include="Sources\svc_mqtt_data_platform\ISvcData.h" />
+    <ClInclude Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg.h" />
+    <ClInclude Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg_PubAlive.h" />
+    <ClInclude Include="Sources\svc_mqtt_data_platform\msg\SvcDataMsg_PubData.h" />
+    <ClInclude Include="Sources\svc_mqtt_data_platform\SvcData.h" />
+    <ClInclude Include="Sources\svc_mqtt_data_platform\SvcDataCLI.h" />
+    <ClInclude Include="Sources\svc_mqtt_firmware_platform\ISvcFirmware.h" />
+    <ClInclude Include="Sources\svc_mqtt_firmware_platform\SvcMqttFirmware.h" />
+    <ClInclude Include="Sources\utils.h" />
+    <ClInclude Include="Sources\utils_platform\Convert.h" />
+    <ClInclude Include="Sources\utils_platform\CS1.h" />
+    <ClInclude Include="Sources\utils_platform\flash.h" />
+    <ClInclude Include="Sources\utils_platform\HF.h" />
+    <ClInclude Include="Sources\utils_platform\Log.h" />
+    <ClInclude Include="Sources\utils_platform\printgdf.h" />
+    <ClInclude Include="Sources\utils_platform\serialize.h" />
+    <ClInclude Include="Sources\utils_platform\Timer.h" />
+    <ClInclude Include="Sources\xTaskDefs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\cli_platform\configCLI.c_example" />
+    <None Include="Sources\cli_platform\configCLI.h_example" />
+    <None Include="Sources\freertos_platform\config\gcc\FreeRTOSConfig.h_template" />
+    <None Include="Sources\freertos_platform\FreeRTOS_Components.peb" />
+    <None Include="Sources\freertos_platform\port\portasm.s" />
+    <None Include="Sources\freertos_platform\RTOS.c_gen" />
+    <None Include="Sources\freertos_platform\RTOS.h_gen" />
+    <None Include="Sources\freertos_sysview_platform\Config\SEGGER_RTT_Conf.h_template" />
+    <None Include="Sources\freertos_sysview_platform\Config\SEGGER_SYSVIEW_Conf.h_template" />
+    <None Include="Sources\freertos_sysview_platform\Config\SEGGER_SYSVIEW_Config_FreeRTOS.c_template" />
+    <None Include="Sources\gnss_platform\configGnss.c_example" />
+    <None Include="Sources\gnss_platform\configGnss.h_example" />
+    <None Include="Sources\modem_platform\configModem.c_example" />
+    <None Include="Sources\modem_platform\configModem.h_example" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

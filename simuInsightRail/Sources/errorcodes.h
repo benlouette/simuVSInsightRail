@@ -1,0 +1,62 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/*
+ * errorcodes.h
+ *
+ *  Created on: 17 Mar 2021
+ *      Author: RZ8556
+ */
+
+#ifndef SOURCES_ERRORCODES_H_
+#define SOURCES_ERRORCODES_H_
+
+enum eErrorCodes
+{
+	eLOG_DS374			= 800,
+	eLOG_DS1374_RESET	= 801,
+	eLOG_DS1374_STATUS	= 802,
+	eLOG_DS1374_DISABLE	= 803,
+	eLOG_TMP431,
+	eLOG_RTC_ALARM,
+	eLOG_RTC_TIME,
+	eLOG_GNSS,
+	eLOG_MEMS,
+	eLOG_COLDBOOT,
+	eLOG_NORMAL,
+	eLOG_CM_0 = 950,
+	eLOG_CM_1,
+	eLOG_CM_2,
+	eLOG_TEMP_AMBER = 960,
+	eLOG_TEMP_RED1,
+	eLOG_TEMP_RED2,
+	eLOG_TEMP_HIGH_EXCEEDED,
+	eLOG_TEMP_LOW_EXCEEDED,
+	eLOG_TEMP_COMMS_RETRY,
+	eLOG_FATAL = 999,
+	eLOG_WAKEUP = 9000,				// 9000 + wakeup reason so 0 - 99
+	eLOG_CONNECTION_TIMES = 9100,
+	eLOG_SCHEDULE_WAKEUP,
+	eLOG_FLASH_INIT,
+	eLOG_ENERGY_UPGRADE,
+	eLOG_ENERGY_DATA,
+	eLOG_SAMPLING,
+	eLOG_SAMP_WAIT,
+	eLOG_SAMP_LOCK,
+	eLOG_TEMP_RECORDS,
+	eLOG_SCHEDULE,
+	eLOG_CHECKSUM,
+	eLOG_NVM,
+	eLOG_POFS,
+	eLOG_FLASH_FORMAT,
+};
+
+
+
+#endif /* SOURCES_ERRORCODES_H_ */
+
+
+#ifdef __cplusplus
+}
+#endif

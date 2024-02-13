@@ -1,0 +1,43 @@
+This is an example of a possible Modem driver configuration, actual configuration depends on the project it is used in.
+
+
+
+/ functions to power the modem on and off
+bool Modem_PowerOn(void)
+{
+	return true /* powerModemOn() */;
+}
+
+bool Modem_PowerOff(void)
+{
+	/* powerModemOff();*/
+	return true;
+}
+
+// return true when the modem is poweron according to the modem by testing the modem generated internal power supplies,
+// see datasheet for schematic example
+bool Modem_PowerCheck(void)
+{
+    return GPIO_DRV_ReadPinInput(EHS5E_POWER_IND);
+}
+
+
+// function which controls the line to set power on the modem
+void Modem_WakeUp(bool wakeup)
+{
+#if 0
+	if (wakeup) {
+		GPIO_DRV_SetPinOutput( IGT ) ;
+	} else {
+		GPIO_DRV_ClearPinOutput( IGT ) ;
+	}
+#endif
+}
+
+
+void Modem_FastShutdown(bool off)
+{
+}
+void Modem_Reset(bool reset)
+{
+}

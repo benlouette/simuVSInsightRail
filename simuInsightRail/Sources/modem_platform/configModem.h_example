@@ -1,0 +1,33 @@
+This is an example of a possible Modem driver configuration, actual configuration depends on the project it is used in.
+
+So, place this file in the project config directory and edit as desired.
+
+/*
+ * configModem.h
+ *
+ *  Created on: Nov 24, 2015
+ *      Author: George de Fockert
+ */
+
+#ifndef SOURCES_MODEM_CONFIGMODEM_H_
+#define SOURCES_MODEM_CONFIGMODEM_H_
+
+// Define here the mapping to the actual used UART port for the modem
+#define MODEM_UART_IDX (UART0_IDX)
+
+// unfortunately, also the IRQ vectors must be set
+#define MODEM_UART_RX_TX_IRQhandler UART0_RX_TX_IRQHandler
+#define MODEM_UART_ERR_IRQhandler UART0_ERR_IRQHandler
+
+// functions to power the modem on and off
+bool Modem_PowerOn(void);
+bool Modem_PowerOff(void);
+bool Modem_PowerCheck(void);
+
+// functions to controll external IO lines
+void Modem_WakeUp(bool wakeup);
+void Modem_FastShutdown(bool off);
+void Modem_Reset(bool reset);
+
+
+#endif /* SOURCES_MODEM_CONFIGMODEM_H_ */
