@@ -20,9 +20,9 @@ typedef enum {
 	JSON_EOF = -1
 } JSON_types_t;
 
-const char titleBootloader[] = "Bootloader";
-const char titleApplication[] = "Application";
-const char titlePMIC_Application[] = "PMIC_Application";
+extern const char titleBootloader[] ;
+extern const char titleApplication[] ;
+extern const char titlePMIC_Application[] ;
 
 JSON_types_t jsonFetch(char *json, char *name, void *value, bool search);
 uint32_t getFirmwareVersion(void);

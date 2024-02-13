@@ -1,3 +1,4 @@
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -428,6 +429,75 @@ extern "C"
 #elif defined _MSC_VER
 #define __SIMD32_TYPE  int32_t
 #define CMSIS_UNUSED
+
+  static inline int32_t __SMUAD(int32_t op1, int32_t op2) {
+      return  (int32_t)op1 * (int32_t)op2;
+  }
+
+  static inline int64_t __SMLALD(int32_t op1, int32_t op2, int64_t acc) {
+      return acc + (int64_t)op1 * op2;
+  }
+
+  static inline uint32_t  __CLZ(uint32_t value) {
+      uint32_t count = 0;
+
+      // Check each bit starting from the most significant bit
+      for (int i = 31; i >= 0; i--) {
+          if ((value & (1u << i)) == 0) {
+              count++; // Increment count if the bit is zero
+          }
+          else {
+              break; // Exit loop when encountering the first non-zero bit
+          }
+      }
+  }
+
+  static inline int32_t __QADD(int32_t x, int32_t y) {
+      int32_t result;
+      // Perform the addition
+      result = x + y;
+
+      // Check for overflow
+      if ((x >= 0 && y >= 0 && result < 0) || (x < 0 && y < 0 && result >= 0)) {
+          // Overflow, set result to INT32_MAX or INT32_MIN depending on the sign
+          result = (x < 0) ? INT32_MIN : INT32_MAX;
+      }
+
+      return result;
+  }
+  static inline int32_t __QSUB(int32_t x, int32_t y) {
+      int32_t result;
+
+      result = x - y;
+      // Check for overflow
+      if ((x < 0 && y > 0 && result > 0) || (x > 0 && y < 0 && result < 0)) {
+          // Overflow, set result to INT32_MAX or INT32_MIN depending on the sign
+          result = (x < 0) ? INT32_MIN : INT32_MAX;
+      }
+
+      return result;
+  }
+
+  static inline int32_t __SSAT(int32_t value, uint32_t sat_bits) {
+      // Calculate the maximum positive value that can be represented with the given number of bits
+      int32_t max_pos_value = (1 << (sat_bits - 1)) - 1;
+      // Calculate the minimum negative value that can be represented with the given number of bits
+      int32_t min_neg_value = -(1 << (sat_bits - 1));
+
+      // Saturate the value if it exceeds the maximum positive value
+      if (value > max_pos_value) {
+          return max_pos_value;
+      }
+      // Saturate the value if it is less than the minimum negative value
+      else if (value < min_neg_value) {
+          return min_neg_value;
+      }
+      // Return the original value if it is within the representable range
+      else {
+          return value;
+      }
+}
+
 #else
   #error Unknown compiler
 #endif
@@ -5219,7 +5289,19 @@ void arm_rfft_fast_f32(
     acc += (q31_t) S->state[2] << 15;
 
     /* saturate the output */
+#ifdef _MSC_VER
+    if (acc >> 15 > 32767) {
+        out = (q15_t)32767;
+    }
+    else if ((acc >> 15) < -32768) {
+        out = (q15_t)-32768;
+    }
+    else {
+        out = (q15_t)(acc >> 15);
+    }
+#else
     out = (q15_t) (__SSAT((acc >> 15), 16));
+#endif
 
     /* Update state */
     S->state[1] = S->state[0];

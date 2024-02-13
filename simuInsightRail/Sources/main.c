@@ -97,8 +97,7 @@ void redirectprintf(const char* fmt, va_list v)
 #else
 
 #include "CLIio.h"
-extern void set_print_character(void(*p)(int));
-extern void set_read_character(int(*p)(void));
+
 
 int getc_replacement(void)
 {
@@ -118,7 +117,7 @@ void putc_replacement(int c)
 #endif
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
-int main(void)
+int the_main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
 {
   /* Write your local variable definition here */
@@ -140,8 +139,8 @@ int main(void)
 #if defined(PRINTF_BASED)
     set_print_function(redirectprintf);
 #else
-    set_print_character(putc_replacement);
-    set_read_character(getc_replacement);
+    //set_print_character(putc_replacement);
+    //set_read_character(getc_replacement);
 #endif
 #endif
 

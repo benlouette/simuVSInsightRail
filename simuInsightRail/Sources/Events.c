@@ -34,7 +34,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif 
-
+#ifndef _MSC_VER
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
 /*
@@ -77,6 +77,7 @@ void RTOS_vApplicationStackOverflowHook(xTaskHandle pxTask, char *pcTaskName)
 **     Returns     : Nothing
 ** ===================================================================
 */
+
 void RTOS_vApplicationMallocFailedHook(void)
 {
   /* Called if a call to pvPortMalloc() fails because there is insufficient
@@ -168,7 +169,7 @@ void PORTE_IRQHandler(void)
 }
 
 /* END Events */
-
+#endif
 #ifdef __cplusplus
 }  /* extern "C" */
 #endif 

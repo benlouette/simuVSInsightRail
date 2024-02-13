@@ -261,7 +261,7 @@ bool tmp431Valid(int localOrRemote, float *pTemperature)
 	float correctedTemp, temps[MAX_SAMPLES][MAX_SENSORS];
 	const char msg[] = "Temperature read error was = %d corrected to %d";
 
-	if(!__isnanf(*pTemperature))
+	if(!isnan(*pTemperature))
 	{
 		// make three readings test for ± 2 degrees
 		for(int i = 0; i < MAX_SAMPLES; i++)

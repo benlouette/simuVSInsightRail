@@ -604,9 +604,17 @@ static bool sendEventLog()
 #endif
        // dammit, we need to set it in network byte order, so have to copy it to RAM
         strcpy(&localLogCopy.logMsg[0], &addrEventLog->logMsg[0]);
+#ifdef _MSC_VER
+
+        localLogCopy.woLogMsg.compNumber = _byteswap_ushort(addrEventLog->logHeader.compNumber);
+        localLogCopy.woLogMsg.eventCode = _byteswap_ushort(addrEventLog->logHeader.eventCode);
+        localLogCopy.woLogMsg.unixTimestamp = _byteswap_uint64(addrEventLog->logHeader.unixTimestamp);
+#else
         localLogCopy.woLogMsg.compNumber =  __builtin_bswap16(addrEventLog->logHeader.compNumber);
         localLogCopy.woLogMsg.eventCode  =  __builtin_bswap16(addrEventLog->logHeader.eventCode);
         localLogCopy.woLogMsg.unixTimestamp = __builtin_bswap64(addrEventLog->logHeader.unixTimestamp);
+#endif
+
         localLogCopy.woLogMsg.sevLvl = addrEventLog->logHeader.sevLvl;
         localLogCopy.woLogMsg.repCounter = 0;
         localLogCopy.woLogMsg.logStart = '#';

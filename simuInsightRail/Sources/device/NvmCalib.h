@@ -22,7 +22,7 @@ extern "C" {
 
 // next externals are defined in the linker script !
 extern uint32_t  __device_calib[],
-                 __device_calib_size[];
+                 __device_calib_size;
 
 
 PACKED_STRUCT_START

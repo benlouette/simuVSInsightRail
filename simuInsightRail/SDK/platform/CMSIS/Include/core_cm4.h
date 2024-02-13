@@ -1726,13 +1726,16 @@ __STATIC_INLINE void NVIC_DecodePriority (uint32_t Priority, uint32_t PriorityGr
  */
 __STATIC_INLINE void NVIC_SystemReset(void)
 {
+#ifndef _MSC_VER
   __DSB();                                                          /* Ensure all outstanding memory accesses included
                                                                        buffered write are completed before reset */
   SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
                            (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
                             SCB_AIRCR_SYSRESETREQ_Msk    );         /* Keep priority group unchanged */
   __DSB();                                                          /* Ensure completion of memory access */
-  while(1) { __NOP(); }                                             /* wait until reset */
+  while(1) { __NOP(); }
+                                             /* wait until reset */
+#endif
 }
 
 /*@} end of CMSIS_Core_NVICFunctions */

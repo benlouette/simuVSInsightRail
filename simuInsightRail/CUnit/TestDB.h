@@ -63,8 +63,8 @@
 
 #include <setjmp.h>   /* jmp_buf */
 
-#include "CUnit/CUnit.h"
-#include "CUnit/CUError.h"
+#include "../CUnit/CUnit.h"
+#include "../CUnit/CUError.h"
 
 #ifdef __cplusplus
 extern "C" {

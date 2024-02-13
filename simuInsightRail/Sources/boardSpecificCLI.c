@@ -2182,7 +2182,7 @@ static bool cliReadLIS3DH( uint32_t args, uint8_t * argv[], uint32_t * argi)
 {
 
 	extern int32_t __sample_buffer[];// defined in the linker file, used for transfering the waveforms
-	extern uint32_t __sample_buffer_size[];
+	extern uint32_t __sample_buffer_size;
 	uint32_t samples = LIS3DH_SAMPLEFREQ; // 1 sec
     tLis3dAcc * acc3dp = (tLis3dAcc *) &__sample_buffer[0];
     tLis3dAccf mean,std;

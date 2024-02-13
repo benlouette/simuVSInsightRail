@@ -1,7 +1,11 @@
+#ifndef SOURCES_CONFIG_CONFIGIDEF_H_
+#define SOURCES_CONFIG_CONFIGIDEF_H_
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+#pragma once
 /*
  * configIDEF.h
  *
@@ -11,8 +15,6 @@ extern "C" {
  * IDEF protocol/service configuration specific to the application
  */
 
-#ifndef SOURCES_CONFIG_CONFIGIDEF_H_
-#define SOURCES_CONFIG_CONFIGIDEF_H_
 
 /*
  * Includes
@@ -35,7 +37,7 @@ extern "C" {
 #define PROTOBUF_GPB2_1
 
 #ifdef PROTOBUF_GPB2_1
-	SKF_ProtoBufFileVersion_t verifyRightVersionFile = SKF_ProtoBufFileVersion_t_PROTOBUF_FILE_VERSION_GPB_2_1;
+extern SKF_ProtoBufFileVersion_t verifyRightVersionFile ;
 #endif
 
 #ifdef PROTOBUF_GPB2
@@ -237,9 +239,11 @@ typedef enum ePredefinedIdefDatasets {
 
 uint32_t SvcData_IdefIdToDataStoreId(uint32_t IdefId);
 
-#endif /* SOURCES_CONFIG_CONFIGIDEF_H_ */
+
 
 
 #ifdef __cplusplus
 }
 #endif
+
+#endif /* SOURCES_CONFIG_CONFIGIDEF_H_ */

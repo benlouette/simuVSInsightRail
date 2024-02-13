@@ -660,6 +660,322 @@ __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_FPSCR(uint32_t fps
 #elif defined ( __CSMC__ ) /*------------------ COSMIC Compiler -------------------*/
 /* Cosmic specific functions */
 #include <cmsis_csm.h>
+#elif defined (_MSC_VER)
+
+/* GNU gcc specific functions */
+
+/** \brief  Enable IRQ Interrupts
+
+  This function enables IRQ interrupts by clearing the I-bit in the CPSR.
+  Can only be executed in Privileged modes.
+ */
+
+#define __STATIC_INLINE static inline
+
+ __STATIC_INLINE void __enable_irq(void)
+{
+    //__ASM volatile ("cpsie i" : : : "memory");
+}
+
+
+/** \brief  Disable IRQ Interrupts
+
+  This function disables IRQ interrupts by setting the I-bit in the CPSR.
+  Can only be executed in Privileged modes.
+ */
+ __STATIC_INLINE void __disable_irq(void)
+{
+    //__ASM volatile ("cpsid i" : : : "memory");
+}
+
+
+/** \brief  Get Control Register
+
+    This function returns the content of the Control Register.
+
+    \return               Control Register value
+ */
+ __STATIC_INLINE uint32_t __get_CONTROL(void)
+{
+    uint32_t result = 0 ;
+
+    //__ASM volatile ("MRS %0, control" : "=r" (result));
+    return(result);
+}
+
+
+/** \brief  Set Control Register
+
+    This function writes the given value to the Control Register.
+
+    \param [in]    control  Control Register value to set
+ */
+ __STATIC_INLINE void __set_CONTROL(uint32_t control)
+{
+    //__ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
+}
+
+
+/** \brief  Get IPSR Register
+
+    This function returns the content of the IPSR Register.
+
+    \return               IPSR Register value
+ */
+ __STATIC_INLINE uint32_t __get_IPSR(void)
+{
+    uint32_t result = 0;
+
+    //__ASM volatile ("MRS %0, ipsr" : "=r" (result));
+    return(result);
+}
+
+
+/** \brief  Get APSR Register
+
+    This function returns the content of the APSR Register.
+
+    \return               APSR Register value
+ */
+ __STATIC_INLINE uint32_t __get_APSR(void)
+{
+    uint32_t result = 0;
+
+    //__ASM volatile ("MRS %0, apsr" : "=r" (result));
+    return(result);
+}
+
+
+/** \brief  Get xPSR Register
+
+    This function returns the content of the xPSR Register.
+
+    \return               xPSR Register value
+ */
+ __STATIC_INLINE uint32_t __get_xPSR(void)
+{
+    uint32_t result = 0;
+
+    //__ASM volatile ("MRS %0, xpsr" : "=r" (result));
+    return(result);
+}
+
+
+/** \brief  Get Process Stack Pointer
+
+    This function returns the current value of the Process Stack Pointer (PSP).
+
+    \return               PSP Register value
+ */
+ __STATIC_INLINE uint32_t __get_PSP(void)
+{
+    register uint32_t result = 0;
+
+    //__ASM volatile ("MRS %0, psp\n"  : "=r" (result));
+    return(result);
+}
+
+
+/** \brief  Set Process Stack Pointer
+
+    This function assigns the given value to the Process Stack Pointer (PSP).
+
+    \param [in]    topOfProcStack  Process Stack Pointer value to set
+ */
+ __STATIC_INLINE void __set_PSP(uint32_t topOfProcStack)
+{
+    //__ASM volatile ("MSR psp, %0\n" : : "r" (topOfProcStack) : "sp");
+}
+
+
+/** \brief  Get Main Stack Pointer
+
+    This function returns the current value of the Main Stack Pointer (MSP).
+
+    \return               MSP Register value
+ */
+ __STATIC_INLINE uint32_t __get_MSP(void)
+{
+    register uint32_t result = 0;
+
+    //__ASM volatile ("MRS %0, msp\n" : "=r" (result));
+    return(result);
+}
+
+
+/** \brief  Set Main Stack Pointer
+
+    This function assigns the given value to the Main Stack Pointer (MSP).
+
+    \param [in]    topOfMainStack  Main Stack Pointer value to set
+ */
+ __STATIC_INLINE void __set_MSP(uint32_t topOfMainStack)
+{
+    //__ASM volatile ("MSR msp, %0\n" : : "r" (topOfMainStack) : "sp");
+}
+
+
+/** \brief  Get Priority Mask
+
+    This function returns the current state of the priority mask bit from the Priority Mask Register.
+
+    \return               Priority Mask value
+ */
+ __STATIC_INLINE uint32_t __get_PRIMASK(void)
+{
+    uint32_t result = 0;
+
+    //__ASM volatile ("MRS %0, primask" : "=r" (result));
+    return(result);
+}
+
+
+/** \brief  Set Priority Mask
+
+    This function assigns the given value to the Priority Mask Register.
+
+    \param [in]    priMask  Priority Mask
+ */
+ __STATIC_INLINE void __set_PRIMASK(uint32_t priMask)
+{
+    //__ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+}
+
+
+#if       (__CORTEX_M >= 0x03)
+
+/** \brief  Enable FIQ
+
+    This function enables FIQ interrupts by clearing the F-bit in the CPSR.
+    Can only be executed in Privileged modes.
+ */
+ __STATIC_INLINE void __enable_fault_irq(void)
+{
+    //__ASM volatile ("cpsie f" : : : "memory");
+}
+
+
+/** \brief  Disable FIQ
+
+    This function disables FIQ interrupts by setting the F-bit in the CPSR.
+    Can only be executed in Privileged modes.
+ */
+ __STATIC_INLINE void __disable_fault_irq(void)
+{
+    //__ASM volatile ("cpsid f" : : : "memory");
+}
+
+
+/** \brief  Get Base Priority
+
+    This function returns the current value of the Base Priority register.
+
+    \return               Base Priority register value
+ */
+ __STATIC_INLINE uint32_t __get_BASEPRI(void)
+{
+    uint32_t result = 0;
+
+    //__ASM volatile ("MRS %0, basepri" : "=r" (result));
+    return(result);
+}
+
+
+/** \brief  Set Base Priority
+
+    This function assigns the given value to the Base Priority register.
+
+    \param [in]    basePri  Base Priority value to set
+ */
+ __STATIC_INLINE void __set_BASEPRI(uint32_t value)
+{
+    //__ASM volatile ("MSR basepri, %0" : : "r" (value) : "memory");
+}
+
+
+/** \brief  Set Base Priority with condition
+
+    This function assigns the given value to the Base Priority register only if BASEPRI masking is disabled,
+    or the new value increases the BASEPRI priority level.
+
+    \param [in]    basePri  Base Priority value to set
+ */
+ __STATIC_INLINE void __set_BASEPRI_MAX(uint32_t value)
+{
+    //__ASM volatile ("MSR basepri_max, %0" : : "r" (value) : "memory");
+}
+
+
+/** \brief  Get Fault Mask
+
+    This function returns the current value of the Fault Mask register.
+
+    \return               Fault Mask register value
+ */
+ __STATIC_INLINE uint32_t __get_FAULTMASK(void)
+{
+    uint32_t result = 0;
+
+    //__ASM volatile ("MRS %0, faultmask" : "=r" (result));
+    return(result);
+}
+
+
+/** \brief  Set Fault Mask
+
+    This function assigns the given value to the Fault Mask register.
+
+    \param [in]    faultMask  Fault Mask value to set
+ */
+ __STATIC_INLINE void __set_FAULTMASK(uint32_t faultMask)
+{
+    //__ASM volatile ("MSR faultmask, %0" : : "r" (faultMask) : "memory");
+}
+
+#endif /* (__CORTEX_M >= 0x03) */
+
+
+#if       (__CORTEX_M == 0x04) || (__CORTEX_M == 0x07)
+
+/** \brief  Get FPSCR
+
+    This function returns the current value of the Floating Point Status/Control register.
+
+    \return               Floating Point Status/Control register value
+ */
+ __STATIC_INLINE uint32_t __get_FPSCR(void)
+{
+#if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
+    uint32_t result = 0;
+
+    ///* Empty asm statement works as a scheduling barrier */
+    //__ASM volatile ("");
+    //__ASM volatile ("VMRS %0, fpscr" : "=r" (result));
+    //__ASM volatile ("");
+    return(result);
+#else
+    return(0);
+#endif
+}
+
+
+/** \brief  Set FPSCR
+
+    This function assigns the given value to the Floating Point Status/Control register.
+
+    \param [in]    fpscr  Floating Point Status/Control value to set
+ */
+ __STATIC_INLINE void __set_FPSCR(uint32_t fpscr)
+{
+#if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
+    /* Empty asm statement works as a scheduling barrier */
+    //__ASM volatile ("");
+    //__ASM volatile ("VMSR fpscr, %0" : : "r" (fpscr) : "vfpcc");
+    //__ASM volatile ("");
+#endif
+}
+
+#endif /* (__CORTEX_M == 0x04) || (__CORTEX_M == 0x07) */
 
 #endif
 

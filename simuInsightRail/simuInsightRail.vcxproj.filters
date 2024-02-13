@@ -5,14 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Source Files\Sources">
       <UniqueIdentifier>{dacb3504-510f-4bc7-92a7-5b01fd75c9cd}</UniqueIdentifier>
     </Filter>
@@ -753,9 +745,6 @@
     <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_driver.c">
       <Filter>Source Files\SDK\platform\drivers\src\wdog</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_irq.c">
-      <Filter>Source Files\SDK\platform\drivers\src\wdog</Filter>
-    </ClCompile>
     <ClCompile Include="SDK\platform\drivers\src\wdog\fsl_wdog_lpm_callback.c">
       <Filter>Source Files\SDK\platform\drivers\src\wdog</Filter>
     </ClCompile>
@@ -812,9 +801,6 @@
     </ClCompile>
     <ClCompile Include="SDK\platform\hal\src\wdog\fsl_wdog_hal.c">
       <Filter>Source Files\SDK\platform\hal\src\wdog</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\platform\osa\src\fsl_os_abstraction_bm.c">
-      <Filter>Source Files\SDK\platform\osa\src</Filter>
     </ClCompile>
     <ClCompile Include="SDK\platform\osa\src\fsl_os_abstraction_free_rtos.c">
       <Filter>Source Files\SDK\platform\osa\src</Filter>
@@ -1109,6 +1095,9 @@
     </ClCompile>
     <ClCompile Include="Sources\utils_platform\Timer.c">
       <Filter>Source Files\Sources\utils_platform</Filter>
+    </ClCompile>
+    <ClCompile Include="declarationExtern.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1491,9 +1480,6 @@
       <Filter>Source Files\SDK\platform\hal\src\sim\MK24F12</Filter>
     </ClInclude>
     <ClInclude Include="SDK\platform\osa\inc\fsl_os_abstraction.h">
-      <Filter>Source Files\SDK\platform\osa\inc</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\platform\osa\inc\fsl_os_abstraction_bm.h">
       <Filter>Source Files\SDK\platform\osa\inc</Filter>
     </ClInclude>
     <ClInclude Include="SDK\platform\osa\inc\fsl_os_abstraction_free_rtos.h">

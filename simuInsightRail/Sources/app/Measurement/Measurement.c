@@ -37,7 +37,7 @@ extern "C" {
 #include "EnergyMonitor.h"
 #include "Device.h"
 #include "pmic.h"
-#include "CUnit/util.h"
+#include "../CUnit/util.h"
 #include "Measurement.h"
 
 #define GNSS_SPEED_TIMEOUT_MAX	300

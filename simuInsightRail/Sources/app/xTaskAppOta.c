@@ -475,7 +475,7 @@ static const char loader_test_data_misc[] = {
 	"}\n"
 };
 
-#include "CUnit/CUnit.h"
+#include "../CUnit/CUnit.h"
 
 // function for unit testing
 void ut_json()

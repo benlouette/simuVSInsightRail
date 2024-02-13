@@ -22,7 +22,7 @@ extern "C" {
 #include "EventLog.h"
 //from linker scripts
 extern uint32_t __event_log[] ,
-        __eventlog_size[];
+        __eventlog_size;
 
 //#define DEBUGPRINTKEY
 

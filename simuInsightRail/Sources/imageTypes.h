@@ -12,10 +12,10 @@ extern "C" {
 #ifndef SOURCES_IMAGETYPES_H_
 #define SOURCES_IMAGETYPES_H_
 
-const char sMK24_Loader[] = "MK24_Loader";
-const char sMK24_Application[] = "MK24_Application";
-const char sPMIC_Application[] = "PMIC_Application";
-const char sPackage[] = "Package";
+extern const char sMK24_Loader[] ;
+extern const char sMK24_Application[] ;
+extern const char sPMIC_Application[] ;
+extern const char sPackage[] ;
 
 typedef enum
 {

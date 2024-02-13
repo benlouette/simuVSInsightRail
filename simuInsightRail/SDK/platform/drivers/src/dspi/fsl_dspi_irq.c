@@ -88,6 +88,8 @@ void SPI1_IRQHandler(void)
  *
  * It passes the instance to the shared DSPI IRQ handler.
  */
+#ifndef _MSC_VER
+
 void SPI0_IRQHandler(void)
 {
     DSPI_DRV_IRQHandler(SPI0_IDX);
@@ -113,6 +115,7 @@ void SPI2_IRQHandler(void)
     DSPI_DRV_IRQHandler(SPI2_IDX);
 }
 
+#endif
 #endif
 
 /*! @} */

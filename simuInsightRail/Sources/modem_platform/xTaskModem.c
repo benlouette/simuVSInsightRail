@@ -1012,15 +1012,15 @@ int Modem_read(uint8_t *data, uint32_t len, uint32_t timeoutMs)
 	return readcount;
 }
 
-void Modem_print_info()
-{
-	printf("Modem:\n");
-	printf("ioState = %s\n", MODEM_IOSTATETOSTRING(modemStatus.ioState));
-	printf("AtCommandState = %s\n", MODEM_ATCOMMANDSTATETOSTRING(modemStatus.atCommand.AtCommandState ) );
-	printf("Characters in responseBuf = %d\n", modemStatus.atCommand.ATresponseBufIdx);
-	printf("transparent mode read status:\n");
-	printf("dest address=%08x, amount=%d, count=%d\n",modemStatus.transparentRxState.dest, modemStatus.transparentRxState.amount, modemStatus.transparentRxState.count);
-}
+//void Modem_print_info()
+//{
+//	printf("Modem:\n");
+//	printf("ioState = %s\n", MODEM_IOSTATETOSTRING(modemStatus.ioState));
+//	printf("AtCommandState = %s\n", MODEM_ATCOMMANDSTATETOSTRING(modemStatus.atCommand.AtCommandState ) );
+//	printf("Characters in responseBuf = %d\n", modemStatus.atCommand.ATresponseBufIdx);
+//	printf("transparent mode read status:\n");
+//	printf("dest address=%08x, amount=%d, count=%d\n",modemStatus.transparentRxState.dest, modemStatus.transparentRxState.amount, modemStatus.transparentRxState.count);
+//}
 
 /*
  * Modem_IsDCDEventFlagSet

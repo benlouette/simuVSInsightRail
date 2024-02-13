@@ -40,7 +40,7 @@ enum EpoStatus { EPO_STATUS EPO_STATUS_TOP };
 #undef C
 
 #define C(x) #x,
-const char * const EpoErrorString[] = { EPO_STATUS };
+extern const char * const EpoErrorString[] ;
 
 enum EpoStatus Ephemeris_Download(void);
 enum EpoStatus Ephemeris_epoToGNSS(void);

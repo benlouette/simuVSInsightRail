@@ -31,8 +31,8 @@ extern "C" {
 #define CONFIG_MQTT_PUBTOPIC_PREFIX_EPHEMERIS    CONFIG_MQTT_SUBTOPIC_PREFIX_EPHEMERIS
 #endif
 
-const char kstrOTACompleteSubTopic[] = "/OTAComplete";
-const char kstrImagesManifestUpdateSubTopic[] = "/ImagesManifestUpdate";
+extern const char kstrOTACompleteSubTopic[] ;
+extern const char kstrImagesManifestUpdateSubTopic[] ;
 
 void mqttGetServerConfig(uint8_t **url, uint16_t *port, bool *secure);
 uint8_t *mqttGetDeviceId();

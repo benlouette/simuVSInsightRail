@@ -5,7 +5,7 @@ extern "C" {
 #ifndef UNITTEST_H_
 #define UNITTEST_H_
 
-#include "CUnit/CUnit.h"
+#include "../CUnit/CUnit.h"
 
 /*
  * structure for defining a unit test suite

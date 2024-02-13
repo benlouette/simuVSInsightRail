@@ -23,7 +23,7 @@ extern "C" {
 #endif
 // next externals are defined in the linker script !
 extern uint32_t  __app_nvdata[],
-                 __app_nvdata_size[];
+                 __app_nvdata_size;
 
 PACKED_STRUCT_START
 typedef struct  commDataStruct {

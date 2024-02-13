@@ -21,6 +21,7 @@ void crc32_calc(void *pBuff, uint32_t length);
 uint32_t crc32_finish(void);
 uint32_t crc32_hardware(void *pBuff, uint32_t length);
 
+
 #endif /* SOURCES_CRC_H_ */
 
 

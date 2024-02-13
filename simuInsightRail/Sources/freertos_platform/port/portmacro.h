@@ -185,8 +185,9 @@ extern void vPortClearInterruptMaskFromISR(unsigned portBASE_TYPE);
      * registers.  r0 is clobbered.
      */
 #ifdef _MSC_VER
-#define portSET_INTERRUPT_MASK()  \
-  __set_BASEPRI(configMAX_SYSCALL_INTERRUPT_PRIORITY)
+
+#define portSET_INTERRUPT_MASK()  {}
+
 #else
     #define portSET_INTERRUPT_MASK()  \
 	  __asm volatile            \
@@ -203,8 +204,7 @@ extern void vPortClearInterruptMaskFromISR(unsigned portBASE_TYPE);
      * r0 is clobbered.
      */
 #ifdef _MSC_VER
-#define portCLEAR_INTERRUPT_MASK() \
-  __set_BASEPRI(0)
+#define portCLEAR_INTERRUPT_MASK() {}
 #else
     #define portCLEAR_INTERRUPT_MASK() \
 	  __asm volatile            \
@@ -245,10 +245,18 @@ extern void vPortExitCritical(void);
 #else /* IAR, CW ARM or GNU ARM gcc */
   #define portDISABLE_ALL_INTERRUPTS()   __asm volatile("cpsid i")
 #endif
+#ifdef _MSC_VER
+#define portDISABLE_INTERRUPTS()  {}
+#define portENABLE_INTERRUPTS()   {} 
+#define portENTER_CRITICAL()     {}
+#define portEXIT_CRITICAL()    {}
+
+#else
 #define portDISABLE_INTERRUPTS()   portSET_INTERRUPT_MASK()
 #define portENABLE_INTERRUPTS()    portCLEAR_INTERRUPT_MASK()
 #define portENTER_CRITICAL()       vPortEnterCritical()
 #define portEXIT_CRITICAL()        vPortExitCritical()
+#endif
 
 /* There are an uneven number of items on the initial stack, so
 portALIGNMENT_ASSERT_pxCurrentTCB() will trigger false positive asserts. */

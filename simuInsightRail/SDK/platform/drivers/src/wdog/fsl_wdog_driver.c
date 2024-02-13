@@ -78,7 +78,11 @@ static void WDOG_DRV_WaitWctClose(void)
     /* here using nop instruction, otherwise empty code will be optimized in release target */
     for ( count = 0 ; count < wdogWctInstructionCount; count++ )
     {
+#ifdef _MSC_VER
+        __nop();
+#else
         __NOP();
+#endif
     }
 }
 

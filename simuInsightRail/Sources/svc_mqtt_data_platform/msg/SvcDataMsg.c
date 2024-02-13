@@ -371,7 +371,11 @@ bool SvcDataMsg_EncodeUint16(pb_ostream_t *stream_p, const pb_field_t *field, vo
 #else
         tmp = ((uint16_t *) dataDef_p->address)[idx];      // a lot faster then using DataStore_GetUint16()
 #endif
+#ifdef _MSC_VER
+        tmp = _byteswap_ushort(tmp);
+#else
         tmp = __builtin_bswap16(tmp);// convert to high byte first network order
+#endif
         pb_write(stream_p, (uint8_t*) &tmp, sizeof(tmp));
     }
 
@@ -454,7 +458,11 @@ bool SvcDataMsg_EncodeUint32(pb_ostream_t *stream_p, const pb_field_t *field, vo
             if (false == DataStore_BlockGetUint32(dataDef_p->objectId, startIdx, buf_items, &tmp[0])) return false;
             // and now networkbyte order
             for (idx=0; idx<buf_items; idx++) {
+#ifndef _MSC_VER
                 tmp[idx] =  __builtin_bswap32(tmp[idx]);
+#else
+                tmp[idx] = _byteswap_ulong(tmp[idx]);
+#endif
             }
             pb_write(stream_p, (uint8_t*) &tmp[0], buf_items * sizeof(*tmp));
             startIdx += buf_items;
@@ -498,7 +506,12 @@ bool SvcDataMsg_EncodeUint64(pb_ostream_t *stream_p, const pb_field_t *field, vo
 #else
        tmp = ((uint64_t *) dataDef_p->address)[idx];      // a lot faster then using DataStore_GetUint32()
 #endif
+#ifndef _MSC_VER
        tmp = __builtin_bswap64(tmp);// convert to high byte first network order
+#else
+       tmp = _byteswap_uint64(tmp);// convert to high byte first network order
+#endif
+       
         pb_write(stream_p, (uint8_t*) &tmp, sizeof(tmp));
     }
 
@@ -586,7 +599,12 @@ bool SvcDataMsg_EncodeSingle(pb_ostream_t *stream_p, const pb_field_t *field, vo
             if (false == DataStore_BlockGetSingle(dataDef_p->objectId, startIdx, buf_items, &tmp[0].f)) return false;
             // and now networkbyte order
             for (idx=0; idx<buf_items; idx++) {
-                tmp[idx].u =  __builtin_bswap32(tmp[idx].u);
+#ifndef _MSC_VER
+                tmp[idx].u = __builtin_bswap32(tmp[idx].u);
+#else
+                tmp[idx].u = _byteswap_ulong(tmp[idx].u);
+#endif
+                
             }
             pb_write(stream_p, (uint8_t*) &tmp[0].u, buf_items * sizeof(tmp[0].u));
             startIdx += buf_items;
@@ -632,7 +650,14 @@ bool SvcDataMsg_EncodeDouble(pb_ostream_t *stream_p, const pb_field_t *field, vo
 #else
         tmp.d = ((double *) dataDef_p->address)[idx];      // a lot faster then using DataStore_GetUint32()
 #endif
+
+#ifndef _MSC_VER
         tmp.ul = __builtin_bswap64(tmp.ul);
+#else
+        tmp.ul = _byteswap_uint64(tmp.ul);// convert to high byte first network order
+#endif
+
+        
         pb_write(stream_p, (uint8_t*) &tmp.d, sizeof(tmp.d));
 
     }

@@ -36,7 +36,7 @@ extern "C" {
  */
 
 #include <stdio.h>
-#include "CUnit/Basic.h"
+#include "../CUnit/Basic.h"
 #include "UnitTest.h"
 #include "device.h"
 

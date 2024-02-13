@@ -49,7 +49,7 @@
 #define CUNIT_UTIL_H_SEEN
 
 #include <stdlib.h>
-#include "CUnit/CUnit.h"
+#include "../CUnit/CUnit.h"
 
 #ifdef __cplusplus
 extern "C" {

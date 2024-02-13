@@ -27,6 +27,10 @@ extern "C" {
 
 #define FLASH_VECTOR_SIZE		0x410	// note the interrupt table is 0x400 bytes
 
+	const char titleBootloader[] = "Bootloader";
+	const char titleApplication[] = "Application";
+	const char titlePMIC_Application[] = "PMIC_Application";
+
 /*****************************************************************************
  * This area is for test purposes only.
  * It's located at 0x410 in flash for 2K-16 bytes

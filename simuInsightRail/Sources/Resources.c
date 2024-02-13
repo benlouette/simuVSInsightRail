@@ -620,6 +620,7 @@ void Resources_InitTasks( void )
 
 void Resources_Reboot(bool toloader, const char *pMsg)
 {
+#ifndef _MSC_VER
 	// here we do a a controlled reboot to start the application
 	printf("Reboot within 1 second %s\n", pMsg);
 	vTaskDelay(300 / portTICK_PERIOD_MS);
@@ -653,6 +654,7 @@ void Resources_Reboot(bool toloader, const char *pMsg)
     __ISB();
     __DSB();
     ((void(*)(void))start[1])();
+#endif
 }
 
 /*
@@ -728,6 +730,37 @@ uint8_t Resources_GetTaskIndex(TaskHandle_t handle)
 	return 0xFF;
 }
 
+#include <ctype.h>
+#include <string.h>
+
+int strcasecmp(const char* s1, const char* s2) {
+    while (*s1 && *s2) {
+        int diff = tolower(*s1) - tolower(*s2);
+        if (diff != 0) return diff;
+        s1++;
+        s2++;
+    }
+    return tolower(*s1) - tolower(*s2);
+}
+
+int strncasecmp(const char* s1, const char* s2, size_t n) {
+    if (n == 0) return 0; // If n is 0, strings are considered equal
+
+    while (n-- != 0) {
+        unsigned char c1 = (unsigned char)*s1++;
+        unsigned char c2 = (unsigned char)*s2++;
+
+        // If characters are equal or both are null-terminators, continue to next character
+        if (c1 == c2 || (c1 == '\0' && c2 == '\0')) continue;
+
+        // Convert characters to lowercase and compare
+        int lc1 = tolower(c1);
+        int lc2 = tolower(c2);
+        if (lc1 != lc2) return lc1 - lc2; // Return the difference if they are not equal
+}
+
+    return 0; // Strings are equal up to n characters
+}
 
 
 #ifdef __cplusplus

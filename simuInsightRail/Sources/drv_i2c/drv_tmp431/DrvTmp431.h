@@ -52,7 +52,7 @@ extern "C" {
 #define TMP431_REMOTE	1
 
 #define TMP431_ERROR_TEMP	-100.0
-#define FIX_TEMP(t)		(__isnanf(t) ? TMP431_ERROR_TEMP : t)
+#define FIX_TEMP(t)		(isnan(t) ? TMP431_ERROR_TEMP : t)
 
 #ifdef TMP431_LIMITS
 // TODO with a comment stating that "Jayant needs to delete this if not required for the Temp. check" Is that OK?
