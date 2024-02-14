@@ -63,6 +63,7 @@ void pinConfigDigitalIn(uint32_t pinName,
 	                    port_pull_t pullSelect,
 	                    port_interrupt_config_t interruptConfig)
 {
+#ifndef _MSC_VER
     // Get actual port and pin number
     uint32_t port = GPIO_EXTRACT_PORT(pinName);
     uint32_t pin = GPIO_EXTRACT_PIN(pinName);
@@ -109,6 +110,7 @@ void pinConfigDigitalIn(uint32_t pinName,
         INT_SYS_EnableIRQ(g_portIrqId[port]);
     }
 #endif
+#endif
 }
 
 /*
@@ -136,6 +138,7 @@ void pinConfigDigitalOut(uint32_t pinName,
                          uint32_t outputLogic,
                          bool isOpenDrainEnabled)
 {
+#ifndef _MSC_VER
     // Get actual port and pin number
     uint32_t port = GPIO_EXTRACT_PORT(pinName);
     uint32_t pin = GPIO_EXTRACT_PIN(pinName);
@@ -178,6 +181,7 @@ void pinConfigDigitalOut(uint32_t pinName,
         PORT_HAL_SetOpenDrainCmd(portBase, pin, isOpenDrainEnabled);
 #endif
     }
+#endif
 }
 
 /*
@@ -193,6 +197,7 @@ void pinConfigDigitalOut(uint32_t pinName,
 void pinConfigNonDigital(uint32_t pinName,
                          port_mux_t muxMode)
 {
+#ifndef _MSC_VER
     // Get actual port and pin number
     uint32_t port = GPIO_EXTRACT_PORT(pinName);
     uint32_t pin = GPIO_EXTRACT_PIN(pinName);
@@ -207,6 +212,7 @@ void pinConfigNonDigital(uint32_t pinName,
     // Reference manual 11.6.1 Pin control: "When the Pin Muxing mode is
     // configured for analog or is disabled, all the digital functions on that
     // pin are disabled". So don't need to do this here.
+#endif
 }
 
 /*
@@ -220,12 +226,14 @@ void pinConfigNonDigital(uint32_t pinName,
  */
 void pinClearIntFlag(uint32_t pinName)
 {
+#ifndef _MSC_VER
     // Get actual port and pin number
     uint32_t port = GPIO_EXTRACT_PORT(pinName);
     uint32_t pin = GPIO_EXTRACT_PIN(pinName);
     PORT_Type * portBase = g_portBase[port];
 
     PORT_HAL_ClearPinIntFlag(portBase, pin);
+#endif
 }
 
 #if 0
@@ -266,6 +274,7 @@ void portClearAllIntFlags(uint32_t PortIndex)
  */
 void pinConfigTest(void)
 {
+#ifndef _MSC_VER
     // Define pins here locally so not dependent upon gpio1.h
     const uint32_t PinTestLED1 = GPIO_MAKE_PIN(GPIOE_IDX, 6U);
     const uint32_t PinTestLED2 = GPIO_MAKE_PIN(GPIOB_IDX, 8U);
@@ -318,7 +327,7 @@ void pinConfigTest(void)
         pinConfigDigitalOut(PinTestIO1, kPortMuxAsGpio, 0, false);
         pinConfigDigitalOut(PinTestIO1, kPortMuxAsGpio, 1, false);
     }
-
+#endif
     //..........................................................................
 }
 

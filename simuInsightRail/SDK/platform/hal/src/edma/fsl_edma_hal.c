@@ -46,6 +46,7 @@ extern "C" {
  *END**************************************************************************/
 void EDMA_HAL_Init(DMA_Type * base)
 {
+#ifndef _MSC_VER
     uint32_t i;
 
     /* Clear the bit of CR register */
@@ -65,6 +66,7 @@ void EDMA_HAL_Init(DMA_Type * base)
     {
         EDMA_HAL_HTCDClearReg(base, i);
     }
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -124,7 +126,7 @@ void EDMA_HAL_SetGroupPriority(DMA_Type * base, edma_group_priority_t groupPrior
  *END**************************************************************************/
 void EDMA_HAL_SetErrorIntCmd(DMA_Type * base, bool enable, edma_channel_indicator_t channel)
 {
-
+#ifndef _MSC_VER
     if (enable)
     {
         DMA_WR_SEEI(base, channel);
@@ -133,6 +135,7 @@ void EDMA_HAL_SetErrorIntCmd(DMA_Type * base, bool enable, edma_channel_indicato
     {
         DMA_WR_CEEI(base, channel);
     }
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -173,6 +176,7 @@ edma_error_status_all_t EDMA_HAL_GetErrorStatus(DMA_Type * base)
  *END**************************************************************************/
 void EDMA_HAL_SetDmaRequestCmd(DMA_Type * base, edma_channel_indicator_t channel,bool enable)
 {
+#ifndef _MSC_VER
 
     if (enable)
     {
@@ -182,6 +186,7 @@ void EDMA_HAL_SetDmaRequestCmd(DMA_Type * base, edma_channel_indicator_t channel
     {
         DMA_WR_CERQ(base, channel);
     }
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -192,6 +197,7 @@ void EDMA_HAL_SetDmaRequestCmd(DMA_Type * base, edma_channel_indicator_t channel
  *END**************************************************************************/
 void EDMA_HAL_HTCDClearReg(DMA_Type * base,uint32_t channel)
 {
+#ifndef _MSC_VER
     DMA_WR_SADDR(base, channel, 0U);
     DMA_WR_SOFF(base, channel, 0U);
     DMA_WR_ATTR(base, channel, 0U);
@@ -203,6 +209,7 @@ void EDMA_HAL_HTCDClearReg(DMA_Type * base,uint32_t channel)
     DMA_WR_DLAST_SGA(base, channel, 0U);
     DMA_WR_CSR(base, channel, 0U);
     DMA_WR_BITER_ELINKNO(base, channel, 0U);
+#endif
 }
 
 /*FUNCTION**********************************************************************

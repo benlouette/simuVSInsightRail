@@ -55,8 +55,10 @@ void TestUARTInit(void)
     };
     // uart_status_t UARTStatus;
 
+#ifndef _MSC_VER
     /* UARTStatus = */ UART_DRV_Init(TestUARTInstance, &TestUARTState,
                                      &UARTUserConfig);
+#endif // _MSC_VER
 }
 
 /*

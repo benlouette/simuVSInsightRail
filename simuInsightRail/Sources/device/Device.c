@@ -71,7 +71,13 @@ static bool ReadHasPMIC();
 NO_OPTIMIZE_START
 void  Device_InitHardwareVersion()
 {
+#ifdef _MSC_VER
+	m_HardwareVersion = HW_PASSRAIL_REV12;
+#else
 	m_HardwareVersion = ReadHardwareVersionBits();
+#endif
+
+	
 
 	if (m_HardwareVersion >= HW_PASSRAIL_REV13)
 	{
@@ -103,6 +109,7 @@ void  Device_InitHardwareVersion()
 	{
 		m_HardwareVersion = HW_PASSRAIL_REV3;
 	}
+
 }
 NO_OPTIMIZE_END
 

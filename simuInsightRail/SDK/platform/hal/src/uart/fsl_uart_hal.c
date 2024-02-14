@@ -50,6 +50,8 @@ extern "C" {
  *END**************************************************************************/
 void UART_HAL_Init(UART_Type * base)
 {
+#ifndef _MSC_VER
+
     UART_WR_BDH(base, 0U);
     UART_WR_BDL(base, 4U);
     UART_WR_C1(base, 0U);
@@ -76,6 +78,7 @@ void UART_HAL_Init(UART_Type * base)
     UART_WR_SFIFO(base, 0xC0U);
     UART_WR_TWFIFO(base, 0U);
     UART_WR_RWFIFO(base, 1U);
+#endif
 #endif
 }
 

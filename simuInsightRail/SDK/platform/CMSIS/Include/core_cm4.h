@@ -1520,6 +1520,7 @@ typedef struct
  */
 __STATIC_INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
 {
+#ifndef _MSC_VER
   uint32_t reg_value;
   uint32_t PriorityGroupTmp = (PriorityGroup & (uint32_t)0x07UL);             /* only values 0..7 are used          */
 
@@ -1529,6 +1530,7 @@ __STATIC_INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
                 ((uint32_t)0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
                 (PriorityGroupTmp << 8)                       );              /* Insert write key and priorty group */
   SCB->AIRCR =  reg_value;
+#endif
 }
 
 
@@ -1540,7 +1542,11 @@ __STATIC_INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
  */
 __STATIC_INLINE uint32_t NVIC_GetPriorityGrouping(void)
 {
+#ifndef _MSC_VER
   return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+#else
+    return 0;
+#endif
 }
 
 
@@ -1552,7 +1558,9 @@ __STATIC_INLINE uint32_t NVIC_GetPriorityGrouping(void)
  */
 __STATIC_INLINE void NVIC_EnableIRQ(IRQn_Type IRQn)
 {
+#ifndef _MSC_VER
   NVIC->ISER[(((uint32_t)(int32_t)IRQn) >> 5UL)] = (uint32_t)(1UL << (((uint32_t)(int32_t)IRQn) & 0x1FUL));
+#endif
 }
 
 
@@ -1564,7 +1572,9 @@ __STATIC_INLINE void NVIC_EnableIRQ(IRQn_Type IRQn)
  */
 __STATIC_INLINE void NVIC_DisableIRQ(IRQn_Type IRQn)
 {
+#ifndef _MSC_VER
   NVIC->ICER[(((uint32_t)(int32_t)IRQn) >> 5UL)] = (uint32_t)(1UL << (((uint32_t)(int32_t)IRQn) & 0x1FUL));
+#endif
 }
 
 
@@ -1580,7 +1590,9 @@ __STATIC_INLINE void NVIC_DisableIRQ(IRQn_Type IRQn)
  */
 __STATIC_INLINE uint32_t NVIC_GetPendingIRQ(IRQn_Type IRQn)
 {
+#ifndef _MSC_VER
   return((uint32_t)(((NVIC->ISPR[(((uint32_t)(int32_t)IRQn) >> 5UL)] & (1UL << (((uint32_t)(int32_t)IRQn) & 0x1FUL))) != 0UL) ? 1UL : 0UL));
+#endif
 }
 
 
@@ -1592,7 +1604,9 @@ __STATIC_INLINE uint32_t NVIC_GetPendingIRQ(IRQn_Type IRQn)
  */
 __STATIC_INLINE void NVIC_SetPendingIRQ(IRQn_Type IRQn)
 {
+#ifndef _MSC_VER
   NVIC->ISPR[(((uint32_t)(int32_t)IRQn) >> 5UL)] = (uint32_t)(1UL << (((uint32_t)(int32_t)IRQn) & 0x1FUL));
+#endif
 }
 
 
@@ -1604,7 +1618,9 @@ __STATIC_INLINE void NVIC_SetPendingIRQ(IRQn_Type IRQn)
  */
 __STATIC_INLINE void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
 {
+#ifndef _MSC_VER
   NVIC->ICPR[(((uint32_t)(int32_t)IRQn) >> 5UL)] = (uint32_t)(1UL << (((uint32_t)(int32_t)IRQn) & 0x1FUL));
+#endif
 }
 
 
@@ -1619,7 +1635,9 @@ __STATIC_INLINE void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
  */
 __STATIC_INLINE uint32_t NVIC_GetActive(IRQn_Type IRQn)
 {
+#ifndef _MSC_VER
   return((uint32_t)(((NVIC->IABR[(((uint32_t)(int32_t)IRQn) >> 5UL)] & (1UL << (((uint32_t)(int32_t)IRQn) & 0x1FUL))) != 0UL) ? 1UL : 0UL));
+#endif
 }
 
 
@@ -1634,12 +1652,14 @@ __STATIC_INLINE uint32_t NVIC_GetActive(IRQn_Type IRQn)
  */
 __STATIC_INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
 {
+#ifndef _MSC_VER
   if((int32_t)IRQn < 0) {
     SCB->SHP[(((uint32_t)(int32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8 - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
   }
   else {
     NVIC->IP[((uint32_t)(int32_t)IRQn)]               = (uint8_t)((priority << (8 - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
   }
+#endif
 }
 
 
@@ -1656,13 +1676,16 @@ __STATIC_INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
  */
 __STATIC_INLINE uint32_t NVIC_GetPriority(IRQn_Type IRQn)
 {
-
+#ifndef _MSC_VER
   if((int32_t)IRQn < 0) {
     return(((uint32_t)SCB->SHP[(((uint32_t)(int32_t)IRQn) & 0xFUL)-4UL] >> (8 - __NVIC_PRIO_BITS)));
   }
   else {
     return(((uint32_t)NVIC->IP[((uint32_t)(int32_t)IRQn)]               >> (8 - __NVIC_PRIO_BITS)));
   }
+#else 
+    return 0;
+#endif
 }
 
 
@@ -1680,6 +1703,7 @@ __STATIC_INLINE uint32_t NVIC_GetPriority(IRQn_Type IRQn)
  */
 __STATIC_INLINE uint32_t NVIC_EncodePriority (uint32_t PriorityGroup, uint32_t PreemptPriority, uint32_t SubPriority)
 {
+#ifndef _MSC_VER
   uint32_t PriorityGroupTmp = (PriorityGroup & (uint32_t)0x07UL);   /* only values 0..7 are used          */
   uint32_t PreemptPriorityBits;
   uint32_t SubPriorityBits;
@@ -1691,6 +1715,9 @@ __STATIC_INLINE uint32_t NVIC_EncodePriority (uint32_t PriorityGroup, uint32_t P
            ((PreemptPriority & (uint32_t)((1UL << (PreemptPriorityBits)) - 1UL)) << SubPriorityBits) |
            ((SubPriority     & (uint32_t)((1UL << (SubPriorityBits    )) - 1UL)))
          );
+#else
+    return 0;
+#endif
 }
 
 
@@ -1708,6 +1735,7 @@ __STATIC_INLINE uint32_t NVIC_EncodePriority (uint32_t PriorityGroup, uint32_t P
  */
 __STATIC_INLINE void NVIC_DecodePriority (uint32_t Priority, uint32_t PriorityGroup, uint32_t* pPreemptPriority, uint32_t* pSubPriority)
 {
+#ifndef _MSC_VER
   uint32_t PriorityGroupTmp = (PriorityGroup & (uint32_t)0x07UL);   /* only values 0..7 are used          */
   uint32_t PreemptPriorityBits;
   uint32_t SubPriorityBits;
@@ -1717,6 +1745,7 @@ __STATIC_INLINE void NVIC_DecodePriority (uint32_t Priority, uint32_t PriorityGr
 
   *pPreemptPriority = (Priority >> SubPriorityBits) & (uint32_t)((1UL << (PreemptPriorityBits)) - 1UL);
   *pSubPriority     = (Priority                   ) & (uint32_t)((1UL << (SubPriorityBits    )) - 1UL);
+#endif
 }
 
 
@@ -1768,6 +1797,7 @@ __STATIC_INLINE void NVIC_SystemReset(void)
  */
 __STATIC_INLINE uint32_t SysTick_Config(uint32_t ticks)
 {
+#ifndef _MSC_VER
   if ((ticks - 1UL) > SysTick_LOAD_RELOAD_Msk) { return (1UL); }    /* Reload value impossible */
 
   SysTick->LOAD  = (uint32_t)(ticks - 1UL);                         /* set reload register */
@@ -1776,6 +1806,7 @@ __STATIC_INLINE uint32_t SysTick_Config(uint32_t ticks)
   SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk |
                    SysTick_CTRL_TICKINT_Msk   |
                    SysTick_CTRL_ENABLE_Msk;                         /* Enable SysTick IRQ and SysTick Timer */
+#endif
   return (0UL);                                                     /* Function successful */
 }
 
@@ -1808,12 +1839,14 @@ extern volatile int32_t ITM_RxBuffer;                    /*!< External variable 
  */
 __STATIC_INLINE uint32_t ITM_SendChar (uint32_t ch)
 {
+#ifndef _MSC_VER
   if (((ITM->TCR & ITM_TCR_ITMENA_Msk) != 0UL) &&      /* ITM enabled */
       ((ITM->TER & 1UL               ) != 0UL)   )     /* ITM Port #0 enabled */
   {
     while (ITM->PORT[0].u32 == 0UL) { __NOP(); }
     ITM->PORT[0].u8 = (uint8_t)ch;
   }
+#endif
   return (ch);
 }
 
@@ -1827,12 +1860,12 @@ __STATIC_INLINE uint32_t ITM_SendChar (uint32_t ch)
  */
 __STATIC_INLINE int32_t ITM_ReceiveChar (void) {
   int32_t ch = -1;                           /* no character available */
-
+#ifndef _MSC_VER
   if (ITM_RxBuffer != ITM_RXBUFFER_EMPTY) {
     ch = ITM_RxBuffer;
     ITM_RxBuffer = ITM_RXBUFFER_EMPTY;       /* ready for next character */
   }
-
+#endif
   return (ch);
 }
 
@@ -1845,12 +1878,15 @@ __STATIC_INLINE int32_t ITM_ReceiveChar (void) {
     \return          1  Character available.
  */
 __STATIC_INLINE int32_t ITM_CheckChar (void) {
-
+#ifndef _MSC_VER
   if (ITM_RxBuffer == ITM_RXBUFFER_EMPTY) {
     return (0);                                 /* no character available */
   } else {
     return (1);                                 /*    character available */
   }
+#else
+    return 0;
+#endif
 }
 
 /*@} end of CMSIS_core_DebugFunctions */

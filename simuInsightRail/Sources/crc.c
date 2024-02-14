@@ -25,6 +25,7 @@ extern "C" {
  */
 void crc32_start(void)
 {
+#ifndef _MSC_VER
     // turn on the CRC logic clock
     SIM_SCGC6 |= SIM_SCGC6_CRC_MASK;
 
@@ -33,6 +34,7 @@ void crc32_start(void)
     CRC0->DATA = 0xFFFFFFFF;			/* Seed */
 	CRC0->CTRL &= ~CRC_CTRL_WAS_MASK;	/* Clear WAS */
 	CRC0->GPOLY = CRC_POLYN;			/* Polynomial to match */
+#endif
 }
 
 /**
@@ -45,6 +47,7 @@ void crc32_start(void)
  */
 void crc32_calc(void *pBuff, uint32_t length)
 {
+#ifndef _MSC_VER
 	int i;
 
 	if(length & 3)
@@ -72,6 +75,7 @@ void crc32_calc(void *pBuff, uint32_t length)
 			CRC0->DATA = *p++;
 		}
 	}
+#endif
 }
 
 /**
@@ -85,7 +89,7 @@ uint32_t crc32_finish(void)
 {
 	// save the CRC
 	uint32_t crc = 0;
-
+#ifndef _MSC_VER
 	// Make sure CRC clock is on (in case some muppet calls crc32_finish w/o calling crc32_start)
 	if(SIM_SCGC6 & SIM_SCGC6_CRC_MASK)
 	{
@@ -94,7 +98,7 @@ uint32_t crc32_finish(void)
 
 	// now turn of the clock
 	SIM_SCGC6 &= ~(SIM_SCGC6_CRC_MASK);
-
+#endif
 	return crc;
 }
 

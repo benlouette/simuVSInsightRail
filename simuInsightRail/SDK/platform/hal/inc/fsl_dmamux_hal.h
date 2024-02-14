@@ -90,8 +90,10 @@ void DMAMUX_HAL_Init(DMAMUX_Type * base);
  */
 static inline void DMAMUX_HAL_SetChannelCmd(DMAMUX_Type * base, uint32_t channel, bool enable)
 {
+#ifndef _MSC_VER
     assert(channel < FSL_FEATURE_DMAMUX_MODULE_CHANNEL);
     DMAMUX_BWR_CHCFG_ENBL(base, channel, enable);
+#endif
 }
 
 #if (FSL_FEATURE_DMAMUX_HAS_TRIG == 1)
@@ -104,8 +106,10 @@ static inline void DMAMUX_HAL_SetChannelCmd(DMAMUX_Type * base, uint32_t channel
  */
 static inline void DMAMUX_HAL_SetPeriodTriggerCmd(DMAMUX_Type * base, uint32_t channel, bool enable)
 {
+#ifndef _MSC_VER
     assert(channel < FSL_FEATURE_DMAMUX_MODULE_CHANNEL);
     DMAMUX_BWR_CHCFG_TRIG(base, channel, enable);
+#endif
 }
 #endif
 
@@ -121,8 +125,10 @@ static inline void DMAMUX_HAL_SetPeriodTriggerCmd(DMAMUX_Type * base, uint32_t c
  */
 static inline void DMAMUX_HAL_SetTriggerSource(DMAMUX_Type * base, uint32_t channel, uint8_t source)
 {
+#ifndef _MSC_VER
     assert(channel < FSL_FEATURE_DMAMUX_MODULE_CHANNEL);
     DMAMUX_BWR_CHCFG_SOURCE(base, channel, source);
+#endif
 }
 
 /* @} */

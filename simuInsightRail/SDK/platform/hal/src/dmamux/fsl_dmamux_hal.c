@@ -46,6 +46,7 @@ extern "C" {
  *END**************************************************************************/
 void DMAMUX_HAL_Init(DMAMUX_Type * base)
 {
+#ifndef _MSC_VER
     int i;
 
     for (i = 0; i < FSL_FEATURE_DMAMUX_MODULE_CHANNEL; i++)
@@ -53,6 +54,7 @@ void DMAMUX_HAL_Init(DMAMUX_Type * base)
         DMAMUX_BWR_CHCFG_ENBL(base, i, 0U);
         DMAMUX_BWR_CHCFG_SOURCE(base, i, 0U);
     }
+#endif 
 }
 #endif
 

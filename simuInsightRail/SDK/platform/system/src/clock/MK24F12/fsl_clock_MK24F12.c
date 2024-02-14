@@ -69,6 +69,7 @@ uint32_t g_ftmClkFreq[FTM_EXT_CLK_COUNT];      /* FTM_CLK     */
  *END**************************************************************************/
 void CLOCK_SYS_SetSimConfigration(sim_config_t const *simConfig)
 {
+#ifndef _MSC_VER
     CLOCK_HAL_SetOutDiv(SIM,
                         simConfig->outdiv1,
                         simConfig->outdiv2,
@@ -78,6 +79,7 @@ void CLOCK_SYS_SetSimConfigration(sim_config_t const *simConfig)
     CLOCK_HAL_SetPllfllSel(SIM, simConfig->pllFllSel);
 
     CLOCK_HAL_SetExternalRefClock32kSrc(SIM, simConfig->er32kSrc);
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -90,6 +92,7 @@ void CLOCK_SYS_SetSimConfigration(sim_config_t const *simConfig)
  *END**************************************************************************/
 clock_manager_error_code_t CLOCK_SYS_SetConfiguration(clock_manager_user_config_t const* config)
 {
+#ifndef _MSC_VER
     assert(NULL != config);
 
     /* Set outdiv for safe output clock frequency. */
@@ -104,13 +107,14 @@ clock_manager_error_code_t CLOCK_SYS_SetConfiguration(clock_manager_user_config_
     /* Set OSCERCLK setting. */
     CLOCK_SYS_SetOscerConfigration(0, &config->oscerConfig);
     SystemCoreClock = CLOCK_SYS_GetCoreClockFreq();
-
+#endif
     return kClockManagerSuccess;
 }
 
 clock_manager_error_code_t CLOCK_SYS_GetFreq(clock_names_t clockName,
                                                  uint32_t *frequency)
 {
+#ifndef _MSC_VER
     clock_manager_error_code_t returnCode = kClockManagerSuccess;
 
     switch (clockName)
@@ -171,6 +175,9 @@ clock_manager_error_code_t CLOCK_SYS_GetFreq(clock_names_t clockName,
     }
 
     return returnCode;
+#else
+    return 0;
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -182,7 +189,11 @@ clock_manager_error_code_t CLOCK_SYS_GetFreq(clock_names_t clockName,
  *END**************************************************************************/
 uint32_t CLOCK_SYS_GetCoreClockFreq(void)
 {
+#ifndef _MSC_VER
     return CLOCK_HAL_GetOutClk(MCG) / (CLOCK_HAL_GetOutDiv1(SIM) + 1);
+#else
+    return 0;
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -194,7 +205,11 @@ uint32_t CLOCK_SYS_GetCoreClockFreq(void)
  *END**************************************************************************/
 uint32_t CLOCK_SYS_GetSystemClockFreq(void)
 {
+#ifndef _MSC_VER
     return CLOCK_HAL_GetOutClk(MCG) / (CLOCK_HAL_GetOutDiv1(SIM) + 1);
+#else
+    return 0;
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -206,7 +221,11 @@ uint32_t CLOCK_SYS_GetSystemClockFreq(void)
  *END**************************************************************************/
 uint32_t CLOCK_SYS_GetBusClockFreq(void)
 {
+#ifndef _MSC_VER
     return CLOCK_HAL_GetOutClk(MCG) / (CLOCK_HAL_GetOutDiv2(SIM) + 1);
+#else
+    return 0;
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -218,7 +237,11 @@ uint32_t CLOCK_SYS_GetBusClockFreq(void)
  *END**************************************************************************/
 uint32_t CLOCK_SYS_GetFlexbusFreq(void)
 {
+#ifndef _MSC_VER
     return CLOCK_HAL_GetOutClk(MCG) / (CLOCK_HAL_GetOutDiv3(SIM) + 1);
+#else
+    return 0;
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -230,7 +253,11 @@ uint32_t CLOCK_SYS_GetFlexbusFreq(void)
  *END**************************************************************************/
 uint32_t CLOCK_SYS_GetFlashClockFreq(void)
 {
+#ifndef _MSC_VER
     return CLOCK_HAL_GetOutClk(MCG) / (CLOCK_HAL_GetOutDiv4(SIM) + 1);
+#else
+    return 0;
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -912,6 +939,7 @@ static const sim_clock_gate_name_t uartGateTable[] =
  *END**************************************************************************/
 void CLOCK_SYS_EnableUartClock(uint32_t instance)
 {
+
     assert(instance < sizeof(uartGateTable)/sizeof(uartGateTable[0]));
 
     SIM_HAL_EnableClock(SIM, uartGateTable[instance]);

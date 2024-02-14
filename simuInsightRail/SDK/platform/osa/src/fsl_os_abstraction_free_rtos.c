@@ -52,6 +52,7 @@ extern "C" {
  *END**************************************************************************/
 osa_status_t OSA_SemaCreate(semaphore_t *pSem, uint8_t initValue)
 {
+#ifndef _MSC_VER
     assert(pSem);
 
     *pSem = xSemaphoreCreateCounting(0xFF, initValue);
@@ -60,6 +61,9 @@ osa_status_t OSA_SemaCreate(semaphore_t *pSem, uint8_t initValue)
         return kStatus_OSA_Error; /* creating semaphore failed */
     }
     return kStatus_OSA_Success;
+#else
+    return kStatus_OSA_Success;
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -77,6 +81,7 @@ osa_status_t OSA_SemaCreate(semaphore_t *pSem, uint8_t initValue)
  *END**************************************************************************/
 osa_status_t OSA_SemaWait(semaphore_t *pSem, uint32_t timeout)
 {
+#ifndef _MSC_VER
     uint32_t timeoutTicks;
     assert(pSem);
 
@@ -98,10 +103,14 @@ osa_status_t OSA_SemaWait(semaphore_t *pSem, uint32_t timeout)
     {
         return kStatus_OSA_Success; /* semaphore taken */
     }
+#else
+    return kStatus_OSA_Success; /* semaphore taken */
+#endif
 }
 
 static osa_status_t OSA_SemaphorePostFromTask(semaphore_t *pSem)
 {
+#ifndef _MSC_VER
     if (pdTRUE == xSemaphoreGive(*pSem))
     {
         return kStatus_OSA_Success; /* sync object given */
@@ -110,10 +119,14 @@ static osa_status_t OSA_SemaphorePostFromTask(semaphore_t *pSem)
     {
         return kStatus_OSA_Error;
     }
+#else
+    return kStatus_OSA_Success; /* semaphore taken */
+#endif
 }
 
 static osa_status_t OSA_SemaphorePostFromISR(semaphore_t *pSem)
 {
+#ifndef _MSC_VER
     portBASE_TYPE taskToWake = pdFALSE;
 
     if (pdTRUE==xSemaphoreGiveFromISR(*pSem, &taskToWake))
@@ -128,6 +141,9 @@ static osa_status_t OSA_SemaphorePostFromISR(semaphore_t *pSem)
     {
         return kStatus_OSA_Error;
     }
+#else
+    return kStatus_OSA_Success;
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -180,6 +196,7 @@ osa_status_t OSA_SemaDestroy(semaphore_t *pSem)
  *END**************************************************************************/
 osa_status_t OSA_MutexCreate(mutex_t *pMutex)
 {
+
     assert(pMutex);
     *pMutex = xSemaphoreCreateMutex();
     if (NULL == *pMutex)
@@ -207,6 +224,7 @@ osa_status_t OSA_MutexCreate(mutex_t *pMutex)
  *END**************************************************************************/
 osa_status_t OSA_MutexLock(mutex_t *pMutex, uint32_t timeout)
 {
+#ifndef _MSC_VER
     uint32_t timeoutTicks;
 
     assert(pMutex);
@@ -235,6 +253,7 @@ osa_status_t OSA_MutexLock(mutex_t *pMutex, uint32_t timeout)
     {
         return kStatus_OSA_Success; /* semaphore taken */
     }
+#endif // _MSC_VER
 }
 
 /*FUNCTION**********************************************************************
@@ -245,6 +264,7 @@ osa_status_t OSA_MutexLock(mutex_t *pMutex, uint32_t timeout)
  *END**************************************************************************/
 osa_status_t OSA_MutexUnlock(mutex_t *pMutex)
 {
+#ifndef _MSC_VER
     assert(pMutex);
 
     /* If pMutex is not locked by current task, return error. */
@@ -261,6 +281,7 @@ osa_status_t OSA_MutexUnlock(mutex_t *pMutex)
     {
         return kStatus_OSA_Error;
     }
+#endif
 }
 
 /*FUNCTION**********************************************************************

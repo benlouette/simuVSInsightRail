@@ -86,7 +86,9 @@ edma_status_t EDMA_DRV_Init(edma_state_t *edmaState, const edma_user_config_t *u
     memset(g_edma, 0, sizeof(edma_state_t));
 #if (USE_RTOS)
     /* Init mutex object for the access control of edma data structure. */
+#ifndef _MSC_VER
     OSA_MutexCreate(&g_edma->lock);
+#endif // _MSC_VER
 #endif
 
     for (i = 0; i < DMA_INSTANCE_COUNT; i++)

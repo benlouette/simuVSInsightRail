@@ -463,7 +463,9 @@ extern "C" {
  */
 static inline void SIM_HAL_EnableClock(SIM_Type * base, sim_clock_gate_name_t name)
 {
+#ifndef _MSC_VER
     SIM_BWR_SCGC_BIT(base, name, 1U);
+#endif
 }
 
 /*!
@@ -476,7 +478,9 @@ static inline void SIM_HAL_EnableClock(SIM_Type * base, sim_clock_gate_name_t na
  */
 static inline void SIM_HAL_DisableClock(SIM_Type * base, sim_clock_gate_name_t name)
 {
+#ifndef _MSC_VER
     SIM_BWR_SCGC_BIT(base, name, 0U);
+#endif
 }
 
 /*!
@@ -490,7 +494,12 @@ static inline void SIM_HAL_DisableClock(SIM_Type * base, sim_clock_gate_name_t n
  */
 static inline bool SIM_HAL_GetGateCmd(SIM_Type * base, sim_clock_gate_name_t name)
 {
+#ifndef _MSC_VER
     return (bool)SIM_BRD_SCGC_BIT(base, name);
+#else
+    return 0;
+#endif
+
 }
 
 /*!
@@ -504,7 +513,9 @@ static inline bool SIM_HAL_GetGateCmd(SIM_Type * base, sim_clock_gate_name_t nam
 static inline void CLOCK_HAL_SetExternalRefClock32kSrc(SIM_Type * base,
                                                        clock_er32k_src_t setting)
 {
+#ifndef _MSC_VER
     SIM_BWR_SOPT1_OSC32KSEL(base, setting);
+#endif
 }
 
 /*!
@@ -517,7 +528,11 @@ static inline void CLOCK_HAL_SetExternalRefClock32kSrc(SIM_Type * base,
  */
 static inline clock_er32k_src_t CLOCK_HAL_GetExternalRefClock32kSrc(SIM_Type * base)
 {
+#ifndef _MSC_VER
     return (clock_er32k_src_t)SIM_BRD_SOPT1_OSC32KSEL(base);
+#else
+    return 0;
+#endif
 }
 
 /*!
@@ -533,7 +548,9 @@ static inline void CLOCK_HAL_SetSdhcSrc(SIM_Type * base,
                                         uint32_t  instance,
                                         clock_sdhc_src_t setting)
 {
+#ifndef _MSC_VER
     SIM_BWR_SOPT2_SDHCSRC(base, setting);
+#endif
 }
 
 /*!
@@ -548,7 +565,9 @@ static inline void CLOCK_HAL_SetSdhcSrc(SIM_Type * base,
 static inline clock_sdhc_src_t CLOCK_HAL_GetSdhcSrc(SIM_Type * base,
                                                     uint32_t  instance)
 {
+#ifndef _MSC_VER
     return (clock_sdhc_src_t)SIM_BRD_SOPT2_SDHCSRC(base);
+#endif
 }
 
 

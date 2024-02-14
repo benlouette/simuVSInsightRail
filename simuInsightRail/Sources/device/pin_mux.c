@@ -1605,6 +1605,7 @@ extern "C" {
 *END**************************************************************************/
 void init_jtag_pins(uint32_t instance)
 {
+#ifndef _MSC_VER
   /* Affects PORTA_PCR0 register */
   PORT_HAL_SetMuxMode(PORTA,0UL,kPortMuxAlt7);
   /* Affects PORTA_PCR1 register */
@@ -1613,6 +1614,7 @@ void init_jtag_pins(uint32_t instance)
   PORT_HAL_SetMuxMode(PORTA,2UL,kPortMuxAlt7);
   /* Affects PORTA_PCR3 register */
   PORT_HAL_SetMuxMode(PORTA,3UL,kPortMuxAlt7);
+#endif
 }
 /*FUNCTION**********************************************************************
 *
@@ -1622,10 +1624,12 @@ void init_jtag_pins(uint32_t instance)
 *END**************************************************************************/
 void deinit_jtag_pins(uint32_t instance)
 {
+#ifndef _MSC_VER
   PORT_HAL_SetMuxMode(PORTA,0UL,kPortPinDisabled);
   PORT_HAL_SetMuxMode(PORTA,1UL,kPortPinDisabled);
   PORT_HAL_SetMuxMode(PORTA,2UL,kPortPinDisabled);
   PORT_HAL_SetMuxMode(PORTA,3UL,kPortPinDisabled);
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -1636,10 +1640,12 @@ void deinit_jtag_pins(uint32_t instance)
 *END**************************************************************************/
 void init_osc_pins(uint32_t instance)
 {
+#ifndef _MSC_VER
   /* Affects PORTA_PCR18 register */
   PORT_HAL_SetMuxMode(PORTA,18UL,kPortPinDisabled);
   /* Affects PORTA_PCR19 register */
   PORT_HAL_SetMuxMode(PORTA,19UL,kPortPinDisabled);
+#endif
 }
 /*FUNCTION**********************************************************************
 *
@@ -1649,8 +1655,10 @@ void init_osc_pins(uint32_t instance)
 *END**************************************************************************/
 void deinit_osc_pins(uint32_t instance)
 {
+#ifndef _MSC_VER
   PORT_HAL_SetMuxMode(PORTA,18UL,kPortPinDisabled);
   PORT_HAL_SetMuxMode(PORTA,19UL,kPortPinDisabled);
+#endif
 }
 
 /*FUNCTION**********************************************************************
@@ -1661,8 +1669,10 @@ void deinit_osc_pins(uint32_t instance)
 *END**************************************************************************/
 void init_tpiu_pins(uint32_t instance)
 {
+#ifndef _MSC_VER
   /* Affects PORTA_PCR2 register */
   PORT_HAL_SetMuxMode(PORTA,2UL,kPortMuxAlt7);
+#endif
 }
 /*FUNCTION**********************************************************************
 *
@@ -1672,7 +1682,9 @@ void init_tpiu_pins(uint32_t instance)
 *END**************************************************************************/
 void deinit_tpiu_pins(uint32_t instance)
 {
+#ifndef _MSC_VER
   PORT_HAL_SetMuxMode(PORTA,2UL,kPortPinDisabled);
+#endif
 }
 /*FUNCTION**********************************************************************
 *
@@ -1682,6 +1694,7 @@ void deinit_tpiu_pins(uint32_t instance)
 *END**************************************************************************/
 void init_uart_pins(uint32_t instance)
 {
+#ifndef _MSC_VER
   switch(instance) {    
     case UART1_IDX:                     /* UART1_IDX */
       /* Affects PORTE_PCR2 register */
@@ -1712,6 +1725,7 @@ void init_uart_pins(uint32_t instance)
     default:
       break;
   }
+#endif
 }
 /*FUNCTION**********************************************************************
 *
@@ -1721,6 +1735,7 @@ void init_uart_pins(uint32_t instance)
 *END**************************************************************************/
 void deinit_uart_pins(uint32_t instance)
 {
+#ifndef _MSC_VER
   switch(instance) {    
     case UART1_IDX:                     /* UART1_IDX */
       PORT_HAL_SetMuxMode(PORTE,2UL,kPortPinDisabled);
@@ -1739,6 +1754,7 @@ void deinit_uart_pins(uint32_t instance)
     default:
       break;
   }
+#endif
 }
 
 

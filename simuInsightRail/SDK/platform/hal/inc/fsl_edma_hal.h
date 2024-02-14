@@ -335,7 +335,9 @@ void EDMA_HAL_ErrorCancelTransfer(DMA_Type * base);
  */
 static inline void EDMA_HAL_SetHaltCmd(DMA_Type * base, bool halt)
 {
+#ifndef _MSC_VER
     DMA_BWR_CR_HALT(base, halt);
+#endif
 }
 
 /*!
@@ -349,7 +351,9 @@ static inline void EDMA_HAL_SetHaltCmd(DMA_Type * base, bool halt)
  */
 static inline void EDMA_HAL_SetHaltOnErrorCmd(DMA_Type * base, bool haltOnError)
 {
+#ifndef _MSC_VER
     DMA_BWR_CR_HOE(base, haltOnError);
+#endif
 }
 
 /*!
@@ -365,7 +369,9 @@ static inline void EDMA_HAL_SetHaltOnErrorCmd(DMA_Type * base, bool haltOnError)
  */
 static inline void EDMA_HAL_SetDebugCmd(DMA_Type * base, bool enable)
 {
+#ifndef _MSC_VER
     DMA_BWR_CR_EDBG(base, enable);
+#endif
 }
 /* @} */
 
@@ -388,9 +394,12 @@ static inline void EDMA_HAL_SetDebugCmd(DMA_Type * base, bool enable)
 static inline void EDMA_HAL_SetChannelPreemptMode(
                 DMA_Type * base, uint32_t channel, bool preempt, bool preemption)
 {
+#ifndef _MSC_VER
     assert(channel < FSL_FEATURE_EDMA_MODULE_CHANNEL);
     DMA_BWR_DCHPRIn_DPA(base, channel, preempt);
+
     DMA_BWR_DCHPRIn_ECP(base, channel, preemption);
+#endif
 }
 
 /*!
@@ -404,8 +413,10 @@ static inline void EDMA_HAL_SetChannelPreemptMode(
 static inline void EDMA_HAL_SetChannelPriority(
                 DMA_Type * base, uint32_t channel, edma_channel_priority_t priority)
 {
+#ifndef _MSC_VER
     assert(channel < FSL_FEATURE_EDMA_MODULE_CHANNEL);
     DMA_BWR_DCHPRIn_CHPRI(base, channel, priority);
+#endif
 }
 /*!
  * @brief Sets the channel arbitration algorithm.
@@ -416,7 +427,9 @@ static inline void EDMA_HAL_SetChannelPriority(
 static inline void EDMA_HAL_SetChannelArbitrationMode(
                 DMA_Type * base, edma_channel_arbitration_t channelArbitration)
 {
+#ifndef _MSC_VER
     DMA_BWR_CR_ERCA(base, channelArbitration);
+#endif
 }
 
 #if (FSL_FEATURE_EDMA_CHANNEL_GROUP_COUNT > 0x1U)
@@ -462,7 +475,9 @@ static inline void EDMA_HAL_SetGroupArbitrationMode(
  */
 static inline void EDMA_HAL_SetMinorLoopMappingCmd(DMA_Type * base, bool enable)
 {
+#ifndef _MSC_VER
     DMA_BWR_CR_EMLM(base, enable);
+#endif
 }
 
 /*!

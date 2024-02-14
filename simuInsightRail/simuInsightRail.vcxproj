@@ -594,6 +594,7 @@
     <ClInclude Include="Sources\imageTypes.h" />
     <ClInclude Include="Sources\Insight.h" />
     <ClInclude Include="Sources\linker.h" />
+    <ClInclude Include="Sources\main.h" />
     <ClInclude Include="Sources\measure_NEW\DacWaveform.h" />
     <ClInclude Include="Sources\measure_NEW\PassRailAnalogCtrl.h" />
     <ClInclude Include="Sources\measure_NEW\PassRailDSP.h" />

@@ -2,10 +2,12 @@
 //
 
 #include <iostream>
+#include "main.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
+    the_main();
     //int main(void) {
     //    // Simulate reset by calling Reset_Handler
     //    Reset_Handler();

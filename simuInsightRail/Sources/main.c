@@ -32,6 +32,7 @@ extern "C" {
 
 
 /* Including needed modules to compile this module/procedure */
+#include "main.h"
 #include "Events.h"
 #include "pin_mux.h"
 #if CPU_INIT_CONFIG
@@ -47,6 +48,8 @@ extern "C" {
 #if defined(USE_CUNIT)
 #include <stdio.h>
 #include <stdlib.h>
+
+
 
 //#define PRINTF_BASED
 #if defined(PRINTF_BASED)

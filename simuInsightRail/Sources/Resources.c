@@ -428,6 +428,8 @@ void Resources_InitLowLevel( void )
 	// TODO check engineering jumper and if fitted (or signal is present), do CLI
 
 	// check CRC of config
+#ifndef _MSC_VER
+
 	uint32_t crc32 = crc32_hardware((uint8_t*)&gBootCfg.cfg, sizeof(gBootCfg.cfg));
 	if(crc32 != gBootCfg.crc32)
 	{
@@ -436,6 +438,7 @@ void Resources_InitLowLevel( void )
 		gBootCfg.cfg.ImageInfoFromLoader.OTAstartAddrForApp = 0xF80000;
 		gBootCfg.crc32 = crc32_hardware((uint8_t*)&gBootCfg.cfg, sizeof(gBootCfg.cfg));
 	}
+#endif // _MSC_VER
 
 	// Load the OTA process management data from flash.
 	OtaProcess_LoadFromFlash();
